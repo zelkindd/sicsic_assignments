@@ -120,7 +120,7 @@ void printMenu() {
                     "8. Sort Stocks by ASCII Sum of Name\n"
                     "9. Check Palindromic Stock Names\n"
                     "10. Exit\n"
-                    "Please enter a number between 0-99: ");
+                    "Please enter a number between 0-99:");
 }
 
 int isValidName(const char* str_buf) {
