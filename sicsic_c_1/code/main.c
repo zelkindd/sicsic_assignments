@@ -22,6 +22,12 @@ int conv_selection_to_int(char *input);
 void addStock(Stock **stocks, int* ptr_stock_count);
 int isValidName(const char* str_buf);
 int isValidPrice(const char *str_buf, float *ptr_price);
+void printStocks(Stock **stocks, int stock_count);
+void doubleStocks(Stock **stocks, int stock_count);
+int isValidPercent(const char* str_buf, int* ptr_percent);
+void dropStocks(Stock **stocks, int stock_count);
+void findLessExpensive(Stock **stocks, int stock_count);
+void sortByPrice(Stock **stocks, int stock_count);
 
 int main() {
     int tries = 5;
@@ -43,12 +49,44 @@ int main() {
         int valid_input = step_0_validate(buffer);
         if (valid_input != 0) {
             tries--;
+            if (tries == 0) { // The number of attempts has run out
+                printf("You have exceeded the allowed number of attempts!");
+            } else {
             printf("The input should be non negative upto 2 digits number, %d tries are left!\n", tries);
+            }
         } else {
             tries = 5; // reset tries after a proper input
-            int choise = conv_selection_to_int(buffer);
-        }
+            choice = conv_selection_to_int(buffer);
 
+            switch (choice) {
+                case 1:
+                    addStock(stocks, &stock_count);
+                    break;
+                case 2:
+                    if (stock_count != 0) {
+                        printStocks(stocks, stock_count); }
+                    break;
+                case 3:
+                    if (stock_count != 0) {
+                        doubleStocks(stocks, stock_count); }
+                    break;
+                case 4:
+                    if (stock_count != 0) {
+                        dropStocks(stocks, stock_count); }
+                    break;
+                case 5:
+                    if (stock_count != 0) {
+                        findLessExpensive(stocks, stock_count); }
+                    break;
+                case 6:
+                    if (stock_count != 0) {
+                        sortByPrice(stocks, stock_count); }
+                    break;
+                default:
+                    break;
+            }
+            printMenu();
+        }
         // 4. if invalid → tries--
         // 5. if valid → convert, reset tries, handle choice
     }
@@ -62,9 +100,7 @@ int step_0_validate (char *input) {
     int number_max_digits = 2;
     int input_length = strlen(input);
 
-
     if (input_length > number_max_digits) return 1; // too long
-
     else {
         for (int i = input_length - 1; i >= 0; i--) {
             if (input[i] < '0' || input[i] > '9') return 2; // not a digit
@@ -97,6 +133,7 @@ void addStock(Stock **stocks, int* ptr_stock_count) {
     } while (!price_valid);
 
     (*ptr_stock_count)++;
+    printf("Stock added.\n");
 }
 
 int conv_selection_to_int(char *input) {
@@ -155,4 +192,98 @@ int isValidPrice(const char *str_buf, float *ptr_price) {
     }
     *ptr_price = (float)result;
     return 1; // it's an int
+}
+
+void printStocks(Stock **stocks, int stock_count) {
+    // prints all existing stocks (names and prices)
+    for (int i = 0; i < stock_count; i++) {
+        printf("%d. %s - $%.2f\n", i+1, stocks[i]->name,  stocks[i]->price); }
+}
+
+void doubleStocks(Stock **stocks, int stock_count) {
+    // doubles the price of each stock in the array
+    for (int i = 0; i < stock_count; i++) {
+        stocks[i]->price *= 2; }
+    printf("Stock prices have doubled.\n");
+}
+
+int isValidPercent(const char* str_buf, int* ptr_percent) {
+    // validates if the input is a valid integer between 0 and 100
+    int str_len = strlen(str_buf);
+
+    // validate each char that is a digit
+    for (int i = str_len - 1; i >= 0; i--) {
+        int is_digit = (str_buf[i] >= '0' && str_buf[i] <= '9');
+        if (!is_digit) return 0; // some char is not a digit
+    }
+
+    // convert to int
+    int result = 0;
+    for (int i = 0; i < str_len ; i++) {
+        result = result * 10 + (str_buf[i] - '0');
+    }
+    // check if the percentage is between 0 and 100
+    if (result < 0 || result > 100) return 0;
+
+    *ptr_percent = result;
+    return 1; // 1 means valid
+}
+
+void dropStocks(Stock **stocks, int stock_count) {
+    // drops all stock prices by a user specified percentage
+    char percent_buffer[99];
+    int percent_value = 0;
+    int is_valid = 0;
+
+    do {
+        printf("Enter x%%: ");
+        fgets(percent_buffer, 99, stdin);
+        percent_buffer[strlen(percent_buffer) - 1] = '\0';
+        is_valid = isValidPercent(percent_buffer, &percent_value);
+    } while (!is_valid);
+
+    for (int i = 0; i < stock_count; i++) {
+        stocks[i]->price = stocks[i]->price * (1.0 - (percent_value / 100.0));
+    }
+
+    printf("Stock prices has dropped by %d%%.\n", percent_value);
+}
+
+void findLessExpensive(Stock **stocks, int stock_count) {
+    // finds and prints the stock with the lowest price
+    int min_index = 0;
+    for (int i = 0; i < stock_count; i++) {
+        if (stocks[i]->price < stocks[min_index]->price) {
+            min_index = i;
+        }
+    }
+    printf("Less expensive stock: %s - $%.2f\n", stocks[min_index]->name, stocks[min_index]->price);
+}
+
+void sortByPrice(Stock **stocks, int stock_count) {
+    // creates a temporary pointer array to sort and print stocks
+    // by price without changing the original array
+    Stock **temp_array = (Stock **) malloc(stock_count * sizeof(Stock *));
+
+    // initialize the temporary array with the original pointers
+    for (int i = 0; i < stock_count; i++) {
+        temp_array[i] = stocks[i];
+    }
+
+    // bubble-sort to sort pointers based on stock prices
+    for (int i = 0; i < stock_count - 1; i++) {
+        for (int j = 0; j < stock_count - i - 1; j++) {
+            if (temp_array[j]->price > temp_array[j + 1]->price) {
+                Stock *temp = temp_array[j];
+                temp_array[j] = temp_array[j + 1];
+                temp_array[j + 1] = temp;
+            }
+        }
+    }
+    // print the sorted results
+    for (int i = 0; i < stock_count; i++) {
+        printf("%d. %s - $%.2f\n", i+1, temp_array[i]->name,  temp_array[i]->price); }
+    printf("Sorted by price.\n");
+    // free the temporary dynamic array
+    free(temp_array);
 }
