@@ -7,15 +7,13 @@
 
 #define MAX_STOCKS 10
 
-
 //Stock struct
 typedef struct {
     char name[21];
     float price;
 } Stock;
 
-
-//Function Prototype
+// --- Function Prototype ---
 int step_0_validate(char *input);
 void printMenu();
 int conv_selection_to_int(char *input);
@@ -28,6 +26,11 @@ int isValidPercent(const char* str_buf, int* ptr_percent);
 void dropStocks(Stock **stocks, int stock_count);
 void findLessExpensive(Stock **stocks, int stock_count);
 void sortByPrice(Stock **stocks, int stock_count);
+void sortByName(Stock **stocks, int stock_count);
+int asciiSum(const char* str);
+void sortByAsciiSum(Stock **stocks, int stock_count);
+int isPalindrome(const char* str);
+void findPalindromes(Stock **stocks, int stock_count);
 
 int main() {
     int tries = 5;
@@ -39,6 +42,10 @@ int main() {
     printMenu();
     Stock **stocks = (Stock **) malloc(MAX_STOCKS * sizeof(Stock *));  // create the array of stocks
 
+    // Initialize all pointers to NULL to prevent unallocated pointer issues
+    for (int i = 0; i < MAX_STOCKS; i++) {
+        stocks[i] = NULL;
+    }
 
     while (tries && choice != 10) {
         // 2. fgets
@@ -82,14 +89,35 @@ int main() {
                     if (stock_count != 0) {
                         sortByPrice(stocks, stock_count); }
                     break;
+                case 7:
+                    if (stock_count != 0) {
+                        sortByName(stocks, stock_count); }
+                    break;
+                case 8:
+                    if (stock_count != 0) {
+                        sortByAsciiSum(stocks, stock_count); }
+                    break;
+                case 9:
+                    if (stock_count != 0) {
+                        findPalindromes(stocks, stock_count); }
+                    break;
                 default:
                     break;
             }
-            printMenu();
+            if (choice != 10) {
+                printMenu(); }
         }
         // 4. if invalid → tries--
         // 5. if valid → convert, reset tries, handle choice
     }
+    // Global Memory Cleanup
+    // Free each dynamically allocated stock structure
+    for (int i = 0; i < MAX_STOCKS; i++) {
+        if (stocks[i] != NULL) {
+            free(stocks[i]);
+        }
+    }
+    free(stocks);
     return 0;
 }
 
@@ -286,4 +314,102 @@ void sortByPrice(Stock **stocks, int stock_count) {
     printf("Sorted by price.\n");
     // free the temporary dynamic array
     free(temp_array);
+}
+
+void sortByName(Stock **stocks, int stock_count) {
+    // creates a temporary pointer array to sort and print
+    // stocks alphabetically without changing the original array
+    Stock **temp_array = (Stock **) malloc(stock_count * sizeof(Stock *));
+
+    // initialize the temporary array with the original pointers
+    for (int i = 0; i < stock_count; i++) {
+        temp_array[i] = stocks[i];
+    }
+
+    // bubble-sort to sort pointers alphabetically using strcmp
+    for (int i = 0; i < stock_count - 1; i++) {
+        for (int j = 0; j < stock_count - i - 1; j++) {
+            // strcmp returns > 0 if the first string comes after the second alphabetically
+            if (strcmp(temp_array[j]->name, temp_array[j + 1]->name) > 0) {
+                // swap pointers in the temporary array only
+                Stock *temp = temp_array[j];
+                temp_array[j] = temp_array[j + 1];
+                temp_array[j + 1] = temp;
+            }
+        }
+    }
+
+    // print the sorted results
+    for (int i = 0; i < stock_count; i++) {
+        printf("%d. %s - $%.2f\n", i + 1, temp_array[i]->name, temp_array[i]->price); }
+    printf("Sorted by name.\n");
+    // free the temporary dynamic array
+    free(temp_array);
+}
+
+int asciiSum(const char* str) {
+    // calc and returns the sum of ASCII values of a string
+    int sum = 0;
+    int len = strlen(str);
+
+    for (int i = 0; i < len; i++) {
+        sum += str[i]; }
+    return sum;
+}
+
+void sortByAsciiSum(Stock **stocks, int stock_count) {
+    // creates a temporary pointer array to sort and print
+    // stocks by their ASCII sum without changing the original array
+    Stock **temp_array = (Stock **) malloc(stock_count * sizeof(Stock *));
+
+    // initialize the temporary array with the original pointers
+    for (int i = 0; i < stock_count; i++) {
+        temp_array[i] = stocks[i];
+    }
+
+    // bubble-sort to sort pointers based on the ASCII sum of stock names
+    for (int i = 0; i < stock_count - 1; i++) {
+        for (int j = 0; j < stock_count - i - 1; j++) {
+            // compare the ASCII sums of adjacent stock names
+            if (asciiSum(temp_array[j]->name) > asciiSum(temp_array[j + 1]->name)) {
+                // swap pointers in the temporary array only
+                Stock *temp = temp_array[j];
+                temp_array[j] = temp_array[j + 1];
+                temp_array[j + 1] = temp;
+            }
+        }
+    }
+
+    // print the sorted results
+    for (int i = 0; i < stock_count; i++) {
+        printf("%d. %s - $%.2f\n", i + 1, temp_array[i]->name, temp_array[i]->price); }
+    printf("Sorted by ASCII sum.\n");
+
+    // free the temporary dynamic array
+    free(temp_array);
+}
+
+int isPalindrome(const char* str) {
+    // returns 1 if the string is a palindrome, and 0 otherwise
+    int left = 0;
+    int right = strlen(str) - 1;
+
+    while (left < right) {
+        // if characters at current positions don't match, it's not a palindrome
+        if (str[left] != str[right]) {
+            return 0;
+        }
+        left++;  // move forward
+        right--; // move backward
+    }
+    return 1; // all characters matched - palindrome
+}
+
+void findPalindromes(Stock **stocks, int stock_count) {
+    // iterates through all stocks and prints those with palindromic names
+    for (int i = 0; i < stock_count; i++) {
+        if (isPalindrome(stocks[i]->name)) {
+            printf("Palindrome stock: %s\n", stocks[i]->name);
+        }
+    }
 }
