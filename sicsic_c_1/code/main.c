@@ -174,7 +174,8 @@ int conv_selection_to_int(char *input) {
 }
 
 void printMenu() {
-    printf("=== Stock Management Menu ===\n"
+    printf(""
+        "=== Stock Management Menu ===\n"
                     "1. Add Stock\n"
                     "2. Print Stocks\n"
                     "3. Double All Stocks Price\n"
@@ -185,7 +186,7 @@ void printMenu() {
                     "8. Sort Stocks by ASCII Sum of Name\n"
                     "9. Check Palindromic Stock Names\n"
                     "10. Exit\n"
-                    "Please enter a number between 0-99: ");
+                    "Please enter a number between 0-99: \n");
 }
 
 int isValidName(const char* str_buf) {
