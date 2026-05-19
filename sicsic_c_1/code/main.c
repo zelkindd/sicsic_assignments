@@ -59,11 +59,10 @@ int main() {
             if (tries == 0) { // The number of attempts has run out
                 printf("You have exceeded the allowed number of attempts!\n");
             } else {
-                printf("Invalid input.\nYou made %d errors from 5, try again.\nPlease enter a number between 0-99: ", (5-tries));
+                printf("Invalid input.\nYou made %d errors from 5, try again.\nPlease enter a number between 0-99: \n", (5-tries));
             }
         } else {
             tries = 5; // reset tries after a proper input
-            printMenu();
             choice = conv_selection_to_int(buffer);
 
             switch (choice) {
@@ -106,6 +105,7 @@ int main() {
                 default:
                     break;
             }
+            if (choice != 10) printMenu();
         }
     }
     // Global Memory Cleanup
@@ -144,7 +144,7 @@ void addStock(Stock **stocks, int* ptr_stock_count) {
     char price_buffer[99];
 
     do {
-        printf("Enter stock name: ");
+        printf("Enter stock name: \n");
         fgets(name_buffer, 99, stdin);
         name_buffer[strlen(name_buffer) - 1] = '\0'; // remove \n
         name_valid = isValidName(name_buffer);
@@ -154,7 +154,7 @@ void addStock(Stock **stocks, int* ptr_stock_count) {
     strcpy(stocks[*ptr_stock_count]->name, name_buffer);
 
     do {
-        printf("Enter stock price: ");
+        printf("Enter stock price: \n");
         fgets(price_buffer, 99, stdin);
         price_buffer[strlen(price_buffer) - 1] = '\0'; // remove \n
         price_valid = isValidPrice(price_buffer, &stocks[*ptr_stock_count]->price);
@@ -185,7 +185,7 @@ void printMenu() {
                     "8. Sort Stocks by ASCII Sum of Name\n"
                     "9. Check Palindromic Stock Names\n"
                     "10. Exit\n"
-                    "Please enter a number between 0-99: ");
+                    "Please enter a number between 0-99: \n");
 }
 
 int isValidName(const char* str_buf) {
@@ -264,7 +264,7 @@ void dropStocks(Stock **stocks, int stock_count) {
     int is_valid = 0;
 
     do {
-        printf("Enter x%%: ");
+        printf("Enter x%%: \n");
         fgets(percent_buffer, 99, stdin);
         percent_buffer[strlen(percent_buffer) - 1] = '\0';
         is_valid = isValidPercent(percent_buffer, &percent_value);
