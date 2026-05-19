@@ -3,10 +3,10 @@
 #include <stdlib.h>
 
 #define MAX_LINE       2048
-#define MAIN_EXE       "code/main.exe"
-#define INPUT_FILE     "assignment_details/input.txt"
-#define EXPECTED_FILE  "assignment_details/output.txt"
-#define ACTUAL_FILE    "code/actual_output.txt"
+#define MAIN_EXE       "./main"
+#define INPUT_FILE     "../assignment_details/input.txt"
+#define EXPECTED_FILE  "../assignment_details/output.txt"
+#define ACTUAL_FILE    "./actual_output.txt"
 
 int main() {
     // Run main.exe, feed input.txt via stdin, capture stdout to actual_output.txt

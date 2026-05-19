@@ -1,0 +1,1318 @@
+[LINE 1] MISMATCH:
+  Expected: ""
+  Actual:   "=== Stock Management Menu ==="
+
+[LINE 2] MISMATCH:
+  Expected: "=== Stock Management Menu ==="
+  Actual:   "1. Add Stock"
+
+[LINE 3] MISMATCH:
+  Expected: "1. Add Stock"
+  Actual:   "2. Print Stocks"
+
+[LINE 4] MISMATCH:
+  Expected: "2. Print Stocks"
+  Actual:   "3. Double All Stocks Price"
+
+[LINE 5] MISMATCH:
+  Expected: "3. Double All Stocks Price"
+  Actual:   "4. Drop Stocks Price by x% "
+
+[LINE 6] MISMATCH:
+  Expected: "4. Drop Stocks Price by x%"
+  Actual:   "5. Find Less Expensive Stock"
+
+[LINE 7] MISMATCH:
+  Expected: "5. Find Less Expensive Stock"
+  Actual:   "6. Sort Stocks by Price"
+
+[LINE 8] MISMATCH:
+  Expected: "6. Sort Stocks by Price"
+  Actual:   "7. Sort Stocks Alphabetically"
+
+[LINE 9] MISMATCH:
+  Expected: "7. Sort Stocks Alphabetically"
+  Actual:   "8. Sort Stocks by ASCII Sum of Name"
+
+[LINE 10] MISMATCH:
+  Expected: "8. Sort Stocks by ASCII Sum of Name"
+  Actual:   "9. Check Palindromic Stock Names"
+
+[LINE 11] MISMATCH:
+  Expected: "9. Check Palindromic Stock Names"
+  Actual:   "10. Exit"
+
+[LINE 12] MISMATCH:
+  Expected: "10. Exit"
+  Actual:   "Please enter a number between 0-99: === Stock Management Menu ==="
+
+[LINE 13] MISMATCH:
+  Expected: "Please enter a number between 0-99: "
+  Actual:   "1. Add Stock"
+
+[LINE 14] MISMATCH:
+  Expected: "Enter stock name: "
+  Actual:   "2. Print Stocks"
+
+[LINE 15] MISMATCH:
+  Expected: "Enter stock price: "
+  Actual:   "3. Double All Stocks Price"
+
+[LINE 16] MISMATCH:
+  Expected: "Stock added."
+  Actual:   "4. Drop Stocks Price by x% "
+
+[LINE 17] MISMATCH:
+  Expected: ""
+  Actual:   "5. Find Less Expensive Stock"
+
+[LINE 18] MISMATCH:
+  Expected: "=== Stock Management Menu ==="
+  Actual:   "6. Sort Stocks by Price"
+
+[LINE 19] MISMATCH:
+  Expected: "1. Add Stock"
+  Actual:   "7. Sort Stocks Alphabetically"
+
+[LINE 20] MISMATCH:
+  Expected: "2. Print Stocks"
+  Actual:   "8. Sort Stocks by ASCII Sum of Name"
+
+[LINE 21] MISMATCH:
+  Expected: "3. Double All Stocks Price"
+  Actual:   "9. Check Palindromic Stock Names"
+
+[LINE 22] MISMATCH:
+  Expected: "4. Drop Stocks Price by x%"
+  Actual:   "10. Exit"
+
+[LINE 23] MISMATCH:
+  Expected: "5. Find Less Expensive Stock"
+  Actual:   "Please enter a number between 0-99: Enter stock name: Enter stock price: Stock added."
+
+[LINE 24] MISMATCH:
+  Expected: "6. Sort Stocks by Price"
+  Actual:   "=== Stock Management Menu ==="
+
+[LINE 25] MISMATCH:
+  Expected: "7. Sort Stocks Alphabetically"
+  Actual:   "1. Add Stock"
+
+[LINE 26] MISMATCH:
+  Expected: "8. Sort Stocks by ASCII Sum of Name"
+  Actual:   "2. Print Stocks"
+
+[LINE 27] MISMATCH:
+  Expected: "9. Check Palindromic Stock Names"
+  Actual:   "3. Double All Stocks Price"
+
+[LINE 28] MISMATCH:
+  Expected: "10. Exit"
+  Actual:   "4. Drop Stocks Price by x% "
+
+[LINE 29] MISMATCH:
+  Expected: "Please enter a number between 0-99: "
+  Actual:   "5. Find Less Expensive Stock"
+
+[LINE 30] MISMATCH:
+  Expected: "Enter stock name: "
+  Actual:   "6. Sort Stocks by Price"
+
+[LINE 31] MISMATCH:
+  Expected: "Enter stock price: "
+  Actual:   "7. Sort Stocks Alphabetically"
+
+[LINE 32] MISMATCH:
+  Expected: "Stock added."
+  Actual:   "8. Sort Stocks by ASCII Sum of Name"
+
+[LINE 33] MISMATCH:
+  Expected: ""
+  Actual:   "9. Check Palindromic Stock Names"
+
+[LINE 34] MISMATCH:
+  Expected: "=== Stock Management Menu ==="
+  Actual:   "10. Exit"
+
+[LINE 35] MISMATCH:
+  Expected: "1. Add Stock"
+  Actual:   "Please enter a number between 0-99: Enter stock name: Enter stock price: Stock added."
+
+[LINE 36] MISMATCH:
+  Expected: "2. Print Stocks"
+  Actual:   "=== Stock Management Menu ==="
+
+[LINE 37] MISMATCH:
+  Expected: "3. Double All Stocks Price"
+  Actual:   "1. Add Stock"
+
+[LINE 38] MISMATCH:
+  Expected: "4. Drop Stocks Price by x%"
+  Actual:   "2. Print Stocks"
+
+[LINE 39] MISMATCH:
+  Expected: "5. Find Less Expensive Stock"
+  Actual:   "3. Double All Stocks Price"
+
+[LINE 40] MISMATCH:
+  Expected: "6. Sort Stocks by Price"
+  Actual:   "4. Drop Stocks Price by x% "
+
+[LINE 41] MISMATCH:
+  Expected: "7. Sort Stocks Alphabetically"
+  Actual:   "5. Find Less Expensive Stock"
+
+[LINE 42] MISMATCH:
+  Expected: "8. Sort Stocks by ASCII Sum of Name"
+  Actual:   "6. Sort Stocks by Price"
+
+[LINE 43] MISMATCH:
+  Expected: "9. Check Palindromic Stock Names"
+  Actual:   "7. Sort Stocks Alphabetically"
+
+[LINE 44] MISMATCH:
+  Expected: "10. Exit"
+  Actual:   "8. Sort Stocks by ASCII Sum of Name"
+
+[LINE 45] MISMATCH:
+  Expected: "Please enter a number between 0-99: "
+  Actual:   "9. Check Palindromic Stock Names"
+
+[LINE 46] MISMATCH:
+  Expected: "Enter stock name: "
+  Actual:   "10. Exit"
+
+[LINE 47] MISMATCH:
+  Expected: "Enter stock price: "
+  Actual:   "Please enter a number between 0-99: Enter stock name: Enter stock price: Stock added."
+
+[LINE 48] MISMATCH:
+  Expected: "Stock added."
+  Actual:   "=== Stock Management Menu ==="
+
+[LINE 49] MISMATCH:
+  Expected: ""
+  Actual:   "1. Add Stock"
+
+[LINE 50] MISMATCH:
+  Expected: "=== Stock Management Menu ==="
+  Actual:   "2. Print Stocks"
+
+[LINE 51] MISMATCH:
+  Expected: "1. Add Stock"
+  Actual:   "3. Double All Stocks Price"
+
+[LINE 52] MISMATCH:
+  Expected: "2. Print Stocks"
+  Actual:   "4. Drop Stocks Price by x% "
+
+[LINE 53] MISMATCH:
+  Expected: "3. Double All Stocks Price"
+  Actual:   "5. Find Less Expensive Stock"
+
+[LINE 54] MISMATCH:
+  Expected: "4. Drop Stocks Price by x%"
+  Actual:   "6. Sort Stocks by Price"
+
+[LINE 55] MISMATCH:
+  Expected: "5. Find Less Expensive Stock"
+  Actual:   "7. Sort Stocks Alphabetically"
+
+[LINE 56] MISMATCH:
+  Expected: "6. Sort Stocks by Price"
+  Actual:   "8. Sort Stocks by ASCII Sum of Name"
+
+[LINE 57] MISMATCH:
+  Expected: "7. Sort Stocks Alphabetically"
+  Actual:   "9. Check Palindromic Stock Names"
+
+[LINE 58] MISMATCH:
+  Expected: "8. Sort Stocks by ASCII Sum of Name"
+  Actual:   "10. Exit"
+
+[LINE 59] MISMATCH:
+  Expected: "9. Check Palindromic Stock Names"
+  Actual:   "Please enter a number between 0-99: Enter stock name: Enter stock price: Stock added."
+
+[LINE 60] MISMATCH:
+  Expected: "10. Exit"
+  Actual:   "=== Stock Management Menu ==="
+
+[LINE 61] MISMATCH:
+  Expected: "Please enter a number between 0-99: "
+  Actual:   "1. Add Stock"
+
+[LINE 62] MISMATCH:
+  Expected: "Enter stock name: "
+  Actual:   "2. Print Stocks"
+
+[LINE 63] MISMATCH:
+  Expected: "Enter stock price: "
+  Actual:   "3. Double All Stocks Price"
+
+[LINE 64] MISMATCH:
+  Expected: "Stock added."
+  Actual:   "4. Drop Stocks Price by x% "
+
+[LINE 65] MISMATCH:
+  Expected: ""
+  Actual:   "5. Find Less Expensive Stock"
+
+[LINE 66] MISMATCH:
+  Expected: "=== Stock Management Menu ==="
+  Actual:   "6. Sort Stocks by Price"
+
+[LINE 67] MISMATCH:
+  Expected: "1. Add Stock"
+  Actual:   "7. Sort Stocks Alphabetically"
+
+[LINE 68] MISMATCH:
+  Expected: "2. Print Stocks"
+  Actual:   "8. Sort Stocks by ASCII Sum of Name"
+
+[LINE 69] MISMATCH:
+  Expected: "3. Double All Stocks Price"
+  Actual:   "9. Check Palindromic Stock Names"
+
+[LINE 70] MISMATCH:
+  Expected: "4. Drop Stocks Price by x%"
+  Actual:   "10. Exit"
+
+[LINE 71] MISMATCH:
+  Expected: "5. Find Less Expensive Stock"
+  Actual:   "Please enter a number between 0-99: Enter stock name: Enter stock price: Stock added."
+
+[LINE 72] MISMATCH:
+  Expected: "6. Sort Stocks by Price"
+  Actual:   "=== Stock Management Menu ==="
+
+[LINE 73] MISMATCH:
+  Expected: "7. Sort Stocks Alphabetically"
+  Actual:   "1. Add Stock"
+
+[LINE 74] MISMATCH:
+  Expected: "8. Sort Stocks by ASCII Sum of Name"
+  Actual:   "2. Print Stocks"
+
+[LINE 75] MISMATCH:
+  Expected: "9. Check Palindromic Stock Names"
+  Actual:   "3. Double All Stocks Price"
+
+[LINE 76] MISMATCH:
+  Expected: "10. Exit"
+  Actual:   "4. Drop Stocks Price by x% "
+
+[LINE 77] MISMATCH:
+  Expected: "Please enter a number between 0-99: "
+  Actual:   "5. Find Less Expensive Stock"
+
+[LINE 78] MISMATCH:
+  Expected: "Enter stock name: "
+  Actual:   "6. Sort Stocks by Price"
+
+[LINE 79] MISMATCH:
+  Expected: "Enter stock price: "
+  Actual:   "7. Sort Stocks Alphabetically"
+
+[LINE 80] MISMATCH:
+  Expected: "Stock added."
+  Actual:   "8. Sort Stocks by ASCII Sum of Name"
+
+[LINE 81] MISMATCH:
+  Expected: ""
+  Actual:   "9. Check Palindromic Stock Names"
+
+[LINE 82] MISMATCH:
+  Expected: "=== Stock Management Menu ==="
+  Actual:   "10. Exit"
+
+[LINE 83] MISMATCH:
+  Expected: "1. Add Stock"
+  Actual:   "Please enter a number between 0-99: Enter stock name: Enter stock price: Stock added."
+
+[LINE 84] MISMATCH:
+  Expected: "2. Print Stocks"
+  Actual:   "=== Stock Management Menu ==="
+
+[LINE 85] MISMATCH:
+  Expected: "3. Double All Stocks Price"
+  Actual:   "1. Add Stock"
+
+[LINE 86] MISMATCH:
+  Expected: "4. Drop Stocks Price by x%"
+  Actual:   "2. Print Stocks"
+
+[LINE 87] MISMATCH:
+  Expected: "5. Find Less Expensive Stock"
+  Actual:   "3. Double All Stocks Price"
+
+[LINE 88] MISMATCH:
+  Expected: "6. Sort Stocks by Price"
+  Actual:   "4. Drop Stocks Price by x% "
+
+[LINE 89] MISMATCH:
+  Expected: "7. Sort Stocks Alphabetically"
+  Actual:   "5. Find Less Expensive Stock"
+
+[LINE 90] MISMATCH:
+  Expected: "8. Sort Stocks by ASCII Sum of Name"
+  Actual:   "6. Sort Stocks by Price"
+
+[LINE 91] MISMATCH:
+  Expected: "9. Check Palindromic Stock Names"
+  Actual:   "7. Sort Stocks Alphabetically"
+
+[LINE 92] MISMATCH:
+  Expected: "10. Exit"
+  Actual:   "8. Sort Stocks by ASCII Sum of Name"
+
+[LINE 93] MISMATCH:
+  Expected: "Please enter a number between 0-99: "
+  Actual:   "9. Check Palindromic Stock Names"
+
+[LINE 94] MISMATCH:
+  Expected: "Enter stock name: "
+  Actual:   "10. Exit"
+
+[LINE 95] MISMATCH:
+  Expected: "Enter stock price: "
+  Actual:   "Please enter a number between 0-99: 1. ESLT - $364.00"
+
+[LINE 96] MISMATCH:
+  Expected: "Stock added."
+  Actual:   "2. Amd - $83.00"
+
+[LINE 97] MISMATCH:
+  Expected: ""
+  Actual:   "3. SEDG - $13.00"
+
+[LINE 98] MISMATCH:
+  Expected: "=== Stock Management Menu ==="
+  Actual:   "4. AAPL - $181.00"
+
+[LINE 99] MISMATCH:
+  Expected: "1. Add Stock"
+  Actual:   "5. NVDA - $97.00"
+
+[LINE 100] MISMATCH:
+  Expected: "2. Print Stocks"
+  Actual:   "6. GOOG - $149.00"
+
+[LINE 101] MISMATCH:
+  Expected: "3. Double All Stocks Price"
+  Actual:   "=== Stock Management Menu ==="
+
+[LINE 102] MISMATCH:
+  Expected: "4. Drop Stocks Price by x%"
+  Actual:   "1. Add Stock"
+
+[LINE 103] MISMATCH:
+  Expected: "5. Find Less Expensive Stock"
+  Actual:   "2. Print Stocks"
+
+[LINE 104] MISMATCH:
+  Expected: "6. Sort Stocks by Price"
+  Actual:   "3. Double All Stocks Price"
+
+[LINE 105] MISMATCH:
+  Expected: "7. Sort Stocks Alphabetically"
+  Actual:   "4. Drop Stocks Price by x% "
+
+[LINE 106] MISMATCH:
+  Expected: "8. Sort Stocks by ASCII Sum of Name"
+  Actual:   "5. Find Less Expensive Stock"
+
+[LINE 107] MISMATCH:
+  Expected: "9. Check Palindromic Stock Names"
+  Actual:   "6. Sort Stocks by Price"
+
+[LINE 108] MISMATCH:
+  Expected: "10. Exit"
+  Actual:   "7. Sort Stocks Alphabetically"
+
+[LINE 109] MISMATCH:
+  Expected: "Please enter a number between 0-99: "
+  Actual:   "8. Sort Stocks by ASCII Sum of Name"
+
+[LINE 110] MISMATCH:
+  Expected: "1. ESLT - $364.00"
+  Actual:   "9. Check Palindromic Stock Names"
+
+[LINE 111] MISMATCH:
+  Expected: "2. Amd - $83.00"
+  Actual:   "10. Exit"
+
+[LINE 112] MISMATCH:
+  Expected: "3. SEDG - $13.00"
+  Actual:   "Please enter a number between 0-99: Stock prices have doubled."
+
+[LINE 113] MISMATCH:
+  Expected: "4. AAPL - $181.00"
+  Actual:   "=== Stock Management Menu ==="
+
+[LINE 114] MISMATCH:
+  Expected: "5. NVDA - $97.00"
+  Actual:   "1. Add Stock"
+
+[LINE 115] MISMATCH:
+  Expected: "6. GOOG - $149.00"
+  Actual:   "2. Print Stocks"
+
+[LINE 116] MISMATCH:
+  Expected: ""
+  Actual:   "3. Double All Stocks Price"
+
+[LINE 117] MISMATCH:
+  Expected: "=== Stock Management Menu ==="
+  Actual:   "4. Drop Stocks Price by x% "
+
+[LINE 118] MISMATCH:
+  Expected: "1. Add Stock"
+  Actual:   "5. Find Less Expensive Stock"
+
+[LINE 119] MISMATCH:
+  Expected: "2. Print Stocks"
+  Actual:   "6. Sort Stocks by Price"
+
+[LINE 120] MISMATCH:
+  Expected: "3. Double All Stocks Price"
+  Actual:   "7. Sort Stocks Alphabetically"
+
+[LINE 121] MISMATCH:
+  Expected: "4. Drop Stocks Price by x%"
+  Actual:   "8. Sort Stocks by ASCII Sum of Name"
+
+[LINE 122] MISMATCH:
+  Expected: "5. Find Less Expensive Stock"
+  Actual:   "9. Check Palindromic Stock Names"
+
+[LINE 123] MISMATCH:
+  Expected: "6. Sort Stocks by Price"
+  Actual:   "10. Exit"
+
+[LINE 124] MISMATCH:
+  Expected: "7. Sort Stocks Alphabetically"
+  Actual:   "Please enter a number between 0-99: Enter stock name: Enter stock price: Stock added."
+
+[LINE 125] MISMATCH:
+  Expected: "8. Sort Stocks by ASCII Sum of Name"
+  Actual:   "=== Stock Management Menu ==="
+
+[LINE 126] MISMATCH:
+  Expected: "9. Check Palindromic Stock Names"
+  Actual:   "1. Add Stock"
+
+[LINE 127] MISMATCH:
+  Expected: "10. Exit"
+  Actual:   "2. Print Stocks"
+
+[LINE 128] MISMATCH:
+  Expected: "Please enter a number between 0-99: "
+  Actual:   "3. Double All Stocks Price"
+
+[LINE 129] MISMATCH:
+  Expected: "Stock prices have doubled."
+  Actual:   "4. Drop Stocks Price by x% "
+
+[LINE 130] MISMATCH:
+  Expected: ""
+  Actual:   "5. Find Less Expensive Stock"
+
+[LINE 131] MISMATCH:
+  Expected: "=== Stock Management Menu ==="
+  Actual:   "6. Sort Stocks by Price"
+
+[LINE 132] MISMATCH:
+  Expected: "1. Add Stock"
+  Actual:   "7. Sort Stocks Alphabetically"
+
+[LINE 133] MISMATCH:
+  Expected: "2. Print Stocks"
+  Actual:   "8. Sort Stocks by ASCII Sum of Name"
+
+[LINE 134] MISMATCH:
+  Expected: "3. Double All Stocks Price"
+  Actual:   "9. Check Palindromic Stock Names"
+
+[LINE 135] MISMATCH:
+  Expected: "4. Drop Stocks Price by x%"
+  Actual:   "10. Exit"
+
+[LINE 136] MISMATCH:
+  Expected: "5. Find Less Expensive Stock"
+  Actual:   "Please enter a number between 0-99: 1. ESLT - $728.00"
+
+[LINE 137] MISMATCH:
+  Expected: "6. Sort Stocks by Price"
+  Actual:   "2. Amd - $166.00"
+
+[LINE 138] MISMATCH:
+  Expected: "7. Sort Stocks Alphabetically"
+  Actual:   "3. SEDG - $26.00"
+
+[LINE 139] MISMATCH:
+  Expected: "8. Sort Stocks by ASCII Sum of Name"
+  Actual:   "4. AAPL - $362.00"
+
+[LINE 140] MISMATCH:
+  Expected: "9. Check Palindromic Stock Names"
+  Actual:   "5. NVDA - $194.00"
+
+[LINE 141] MISMATCH:
+  Expected: "10. Exit"
+  Actual:   "6. GOOG - $298.00"
+
+[LINE 142] MISMATCH:
+  Expected: "Please enter a number between 0-99: "
+  Actual:   "7. INTC - $19.00"
+
+[LINE 143] MISMATCH:
+  Expected: "Enter stock name: "
+  Actual:   "=== Stock Management Menu ==="
+
+[LINE 144] MISMATCH:
+  Expected: "Enter stock price: "
+  Actual:   "1. Add Stock"
+
+[LINE 145] MISMATCH:
+  Expected: "Stock added."
+  Actual:   "2. Print Stocks"
+
+[LINE 146] MISMATCH:
+  Expected: ""
+  Actual:   "3. Double All Stocks Price"
+
+[LINE 147] MISMATCH:
+  Expected: "=== Stock Management Menu ==="
+  Actual:   "4. Drop Stocks Price by x% "
+
+[LINE 148] MISMATCH:
+  Expected: "1. Add Stock"
+  Actual:   "5. Find Less Expensive Stock"
+
+[LINE 149] MISMATCH:
+  Expected: "2. Print Stocks"
+  Actual:   "6. Sort Stocks by Price"
+
+[LINE 150] MISMATCH:
+  Expected: "3. Double All Stocks Price"
+  Actual:   "7. Sort Stocks Alphabetically"
+
+[LINE 151] MISMATCH:
+  Expected: "4. Drop Stocks Price by x%"
+  Actual:   "8. Sort Stocks by ASCII Sum of Name"
+
+[LINE 152] MISMATCH:
+  Expected: "5. Find Less Expensive Stock"
+  Actual:   "9. Check Palindromic Stock Names"
+
+[LINE 153] MISMATCH:
+  Expected: "6. Sort Stocks by Price"
+  Actual:   "10. Exit"
+
+[LINE 154] MISMATCH:
+  Expected: "7. Sort Stocks Alphabetically"
+  Actual:   "Please enter a number between 0-99: Enter x%: Stock prices has dropped by 50%."
+
+[LINE 155] MISMATCH:
+  Expected: "8. Sort Stocks by ASCII Sum of Name"
+  Actual:   "=== Stock Management Menu ==="
+
+[LINE 156] MISMATCH:
+  Expected: "9. Check Palindromic Stock Names"
+  Actual:   "1. Add Stock"
+
+[LINE 157] MISMATCH:
+  Expected: "10. Exit"
+  Actual:   "2. Print Stocks"
+
+[LINE 158] MISMATCH:
+  Expected: "Please enter a number between 0-99: "
+  Actual:   "3. Double All Stocks Price"
+
+[LINE 159] MISMATCH:
+  Expected: "1. ESLT - $728.00"
+  Actual:   "4. Drop Stocks Price by x% "
+
+[LINE 160] MISMATCH:
+  Expected: "2. Amd - $166.00"
+  Actual:   "5. Find Less Expensive Stock"
+
+[LINE 161] MISMATCH:
+  Expected: "3. SEDG - $26.00"
+  Actual:   "6. Sort Stocks by Price"
+
+[LINE 162] MISMATCH:
+  Expected: "4. AAPL - $362.00"
+  Actual:   "7. Sort Stocks Alphabetically"
+
+[LINE 163] MISMATCH:
+  Expected: "5. NVDA - $194.00"
+  Actual:   "8. Sort Stocks by ASCII Sum of Name"
+
+[LINE 164] MISMATCH:
+  Expected: "6. GOOG - $298.00"
+  Actual:   "9. Check Palindromic Stock Names"
+
+[LINE 165] MISMATCH:
+  Expected: "7. INTC - $19.00"
+  Actual:   "10. Exit"
+
+[LINE 166] MISMATCH:
+  Expected: ""
+  Actual:   "Please enter a number between 0-99: 1. ESLT - $364.00"
+
+[LINE 167] MISMATCH:
+  Expected: "=== Stock Management Menu ==="
+  Actual:   "2. Amd - $83.00"
+
+[LINE 168] MISMATCH:
+  Expected: "1. Add Stock"
+  Actual:   "3. SEDG - $13.00"
+
+[LINE 169] MISMATCH:
+  Expected: "2. Print Stocks"
+  Actual:   "4. AAPL - $181.00"
+
+[LINE 170] MISMATCH:
+  Expected: "3. Double All Stocks Price"
+  Actual:   "5. NVDA - $97.00"
+
+[LINE 171] MISMATCH:
+  Expected: "4. Drop Stocks Price by x%"
+  Actual:   "6. GOOG - $149.00"
+
+[LINE 172] MISMATCH:
+  Expected: "5. Find Less Expensive Stock"
+  Actual:   "7. INTC - $9.50"
+
+[LINE 173] MISMATCH:
+  Expected: "6. Sort Stocks by Price"
+  Actual:   "=== Stock Management Menu ==="
+
+[LINE 174] MISMATCH:
+  Expected: "7. Sort Stocks Alphabetically"
+  Actual:   "1. Add Stock"
+
+[LINE 175] MISMATCH:
+  Expected: "8. Sort Stocks by ASCII Sum of Name"
+  Actual:   "2. Print Stocks"
+
+[LINE 176] MISMATCH:
+  Expected: "9. Check Palindromic Stock Names"
+  Actual:   "3. Double All Stocks Price"
+
+[LINE 177] MISMATCH:
+  Expected: "10. Exit"
+  Actual:   "4. Drop Stocks Price by x% "
+
+[LINE 178] MISMATCH:
+  Expected: "Please enter a number between 0-99: "
+  Actual:   "5. Find Less Expensive Stock"
+
+[LINE 179] MISMATCH:
+  Expected: "Enter x%: "
+  Actual:   "6. Sort Stocks by Price"
+
+[LINE 180] MISMATCH:
+  Expected: "Stock prices has dropped by 50%."
+  Actual:   "7. Sort Stocks Alphabetically"
+
+[LINE 181] MISMATCH:
+  Expected: ""
+  Actual:   "8. Sort Stocks by ASCII Sum of Name"
+
+[LINE 182] MISMATCH:
+  Expected: "=== Stock Management Menu ==="
+  Actual:   "9. Check Palindromic Stock Names"
+
+[LINE 183] MISMATCH:
+  Expected: "1. Add Stock"
+  Actual:   "10. Exit"
+
+[LINE 184] MISMATCH:
+  Expected: "2. Print Stocks"
+  Actual:   "Please enter a number between 0-99: Less expensive stock: INTC - $9.50"
+
+[LINE 185] MISMATCH:
+  Expected: "3. Double All Stocks Price"
+  Actual:   "=== Stock Management Menu ==="
+
+[LINE 186] MISMATCH:
+  Expected: "4. Drop Stocks Price by x%"
+  Actual:   "1. Add Stock"
+
+[LINE 187] MISMATCH:
+  Expected: "5. Find Less Expensive Stock"
+  Actual:   "2. Print Stocks"
+
+[LINE 188] MISMATCH:
+  Expected: "6. Sort Stocks by Price"
+  Actual:   "3. Double All Stocks Price"
+
+[LINE 189] MISMATCH:
+  Expected: "7. Sort Stocks Alphabetically"
+  Actual:   "4. Drop Stocks Price by x% "
+
+[LINE 190] MISMATCH:
+  Expected: "8. Sort Stocks by ASCII Sum of Name"
+  Actual:   "5. Find Less Expensive Stock"
+
+[LINE 191] MISMATCH:
+  Expected: "9. Check Palindromic Stock Names"
+  Actual:   "6. Sort Stocks by Price"
+
+[LINE 192] MISMATCH:
+  Expected: "10. Exit"
+  Actual:   "7. Sort Stocks Alphabetically"
+
+[LINE 193] MISMATCH:
+  Expected: "Please enter a number between 0-99: "
+  Actual:   "8. Sort Stocks by ASCII Sum of Name"
+
+[LINE 194] MISMATCH:
+  Expected: "1. ESLT - $364.00"
+  Actual:   "9. Check Palindromic Stock Names"
+
+[LINE 195] MISMATCH:
+  Expected: "2. Amd - $83.00"
+  Actual:   "10. Exit"
+
+[LINE 196] MISMATCH:
+  Expected: "3. SEDG - $13.00"
+  Actual:   "Please enter a number between 0-99: Sorted by price."
+
+[LINE 197] MISMATCH:
+  Expected: "4. AAPL - $181.00"
+  Actual:   "=== Stock Management Menu ==="
+
+[LINE 198] MISMATCH:
+  Expected: "5. NVDA - $97.00"
+  Actual:   "1. Add Stock"
+
+[LINE 199] MISMATCH:
+  Expected: "6. GOOG - $149.00"
+  Actual:   "2. Print Stocks"
+
+[LINE 200] MISMATCH:
+  Expected: "7. INTC - $9.50"
+  Actual:   "3. Double All Stocks Price"
+
+[LINE 201] MISMATCH:
+  Expected: ""
+  Actual:   "4. Drop Stocks Price by x% "
+
+[LINE 202] MISMATCH:
+  Expected: "=== Stock Management Menu ==="
+  Actual:   "5. Find Less Expensive Stock"
+
+[LINE 203] MISMATCH:
+  Expected: "1. Add Stock"
+  Actual:   "6. Sort Stocks by Price"
+
+[LINE 204] MISMATCH:
+  Expected: "2. Print Stocks"
+  Actual:   "7. Sort Stocks Alphabetically"
+
+[LINE 205] MISMATCH:
+  Expected: "3. Double All Stocks Price"
+  Actual:   "8. Sort Stocks by ASCII Sum of Name"
+
+[LINE 206] MISMATCH:
+  Expected: "4. Drop Stocks Price by x%"
+  Actual:   "9. Check Palindromic Stock Names"
+
+[LINE 207] MISMATCH:
+  Expected: "5. Find Less Expensive Stock"
+  Actual:   "10. Exit"
+
+[LINE 208] MISMATCH:
+  Expected: "6. Sort Stocks by Price"
+  Actual:   "Please enter a number between 0-99: 1. INTC - $9.50"
+
+[LINE 209] MISMATCH:
+  Expected: "7. Sort Stocks Alphabetically"
+  Actual:   "2. SEDG - $13.00"
+
+[LINE 210] MISMATCH:
+  Expected: "8. Sort Stocks by ASCII Sum of Name"
+  Actual:   "3. Amd - $83.00"
+
+[LINE 211] MISMATCH:
+  Expected: "9. Check Palindromic Stock Names"
+  Actual:   "4. NVDA - $97.00"
+
+[LINE 212] MISMATCH:
+  Expected: "10. Exit"
+  Actual:   "5. GOOG - $149.00"
+
+[LINE 213] MISMATCH:
+  Expected: "Please enter a number between 0-99: "
+  Actual:   "6. AAPL - $181.00"
+
+[LINE 214] MISMATCH:
+  Expected: "Less expensive stock: INTC - $9.50"
+  Actual:   "7. ESLT - $364.00"
+
+[LINE 215] MISMATCH:
+  Expected: ""
+  Actual:   "=== Stock Management Menu ==="
+
+[LINE 216] MISMATCH:
+  Expected: "=== Stock Management Menu ==="
+  Actual:   "1. Add Stock"
+
+[LINE 217] MISMATCH:
+  Expected: "1. Add Stock"
+  Actual:   "2. Print Stocks"
+
+[LINE 218] MISMATCH:
+  Expected: "2. Print Stocks"
+  Actual:   "3. Double All Stocks Price"
+
+[LINE 219] MISMATCH:
+  Expected: "3. Double All Stocks Price"
+  Actual:   "4. Drop Stocks Price by x% "
+
+[LINE 220] MISMATCH:
+  Expected: "4. Drop Stocks Price by x%"
+  Actual:   "5. Find Less Expensive Stock"
+
+[LINE 221] MISMATCH:
+  Expected: "5. Find Less Expensive Stock"
+  Actual:   "6. Sort Stocks by Price"
+
+[LINE 222] MISMATCH:
+  Expected: "6. Sort Stocks by Price"
+  Actual:   "7. Sort Stocks Alphabetically"
+
+[LINE 223] MISMATCH:
+  Expected: "7. Sort Stocks Alphabetically"
+  Actual:   "8. Sort Stocks by ASCII Sum of Name"
+
+[LINE 224] MISMATCH:
+  Expected: "8. Sort Stocks by ASCII Sum of Name"
+  Actual:   "9. Check Palindromic Stock Names"
+
+[LINE 225] MISMATCH:
+  Expected: "9. Check Palindromic Stock Names"
+  Actual:   "10. Exit"
+
+[LINE 226] MISMATCH:
+  Expected: "10. Exit"
+  Actual:   "Please enter a number between 0-99: Enter stock name: Enter stock price: Stock added."
+
+[LINE 227] MISMATCH:
+  Expected: "Please enter a number between 0-99: "
+  Actual:   "=== Stock Management Menu ==="
+
+[LINE 228] MISMATCH:
+  Expected: "Sorted by price."
+  Actual:   "1. Add Stock"
+
+[LINE 229] MISMATCH:
+  Expected: ""
+  Actual:   "2. Print Stocks"
+
+[LINE 230] MISMATCH:
+  Expected: "=== Stock Management Menu ==="
+  Actual:   "3. Double All Stocks Price"
+
+[LINE 231] MISMATCH:
+  Expected: "1. Add Stock"
+  Actual:   "4. Drop Stocks Price by x% "
+
+[LINE 232] MISMATCH:
+  Expected: "2. Print Stocks"
+  Actual:   "5. Find Less Expensive Stock"
+
+[LINE 233] MISMATCH:
+  Expected: "3. Double All Stocks Price"
+  Actual:   "6. Sort Stocks by Price"
+
+[LINE 234] MISMATCH:
+  Expected: "4. Drop Stocks Price by x%"
+  Actual:   "7. Sort Stocks Alphabetically"
+
+[LINE 235] MISMATCH:
+  Expected: "5. Find Less Expensive Stock"
+  Actual:   "8. Sort Stocks by ASCII Sum of Name"
+
+[LINE 236] MISMATCH:
+  Expected: "6. Sort Stocks by Price"
+  Actual:   "9. Check Palindromic Stock Names"
+
+[LINE 237] MISMATCH:
+  Expected: "7. Sort Stocks Alphabetically"
+  Actual:   "10. Exit"
+
+[LINE 238] MISMATCH:
+  Expected: "8. Sort Stocks by ASCII Sum of Name"
+  Actual:   "Please enter a number between 0-99: Sorted by name."
+
+[LINE 239] MISMATCH:
+  Expected: "9. Check Palindromic Stock Names"
+  Actual:   "=== Stock Management Menu ==="
+
+[LINE 240] MISMATCH:
+  Expected: "10. Exit"
+  Actual:   "1. Add Stock"
+
+[LINE 241] MISMATCH:
+  Expected: "Please enter a number between 0-99: "
+  Actual:   "2. Print Stocks"
+
+[LINE 242] MISMATCH:
+  Expected: "1. INTC - $9.50"
+  Actual:   "3. Double All Stocks Price"
+
+[LINE 243] MISMATCH:
+  Expected: "2. SEDG - $13.00"
+  Actual:   "4. Drop Stocks Price by x% "
+
+[LINE 244] MISMATCH:
+  Expected: "3. Amd - $83.00"
+  Actual:   "5. Find Less Expensive Stock"
+
+[LINE 245] MISMATCH:
+  Expected: "4. NVDA - $97.00"
+  Actual:   "6. Sort Stocks by Price"
+
+[LINE 246] MISMATCH:
+  Expected: "5. GOOG - $149.00"
+  Actual:   "7. Sort Stocks Alphabetically"
+
+[LINE 247] MISMATCH:
+  Expected: "6. AAPL - $181.00"
+  Actual:   "8. Sort Stocks by ASCII Sum of Name"
+
+[LINE 248] MISMATCH:
+  Expected: "7. ESLT - $364.00"
+  Actual:   "9. Check Palindromic Stock Names"
+
+[LINE 249] MISMATCH:
+  Expected: ""
+  Actual:   "10. Exit"
+
+[LINE 250] MISMATCH:
+  Expected: "=== Stock Management Menu ==="
+  Actual:   "Please enter a number between 0-99: 1. AAPL - $181.00"
+
+[LINE 251] MISMATCH:
+  Expected: "1. Add Stock"
+  Actual:   "2. Amd - $83.00"
+
+[LINE 252] MISMATCH:
+  Expected: "2. Print Stocks"
+  Actual:   "3. ESLT - $364.00"
+
+[LINE 253] MISMATCH:
+  Expected: "3. Double All Stocks Price"
+  Actual:   "4. GOOG - $149.00"
+
+[LINE 254] MISMATCH:
+  Expected: "4. Drop Stocks Price by x%"
+  Actual:   "5. IBM - $225.00"
+
+[LINE 255] MISMATCH:
+  Expected: "5. Find Less Expensive Stock"
+  Actual:   "6. INTC - $9.50"
+
+[LINE 256] MISMATCH:
+  Expected: "6. Sort Stocks by Price"
+  Actual:   "7. NVDA - $97.00"
+
+[LINE 257] MISMATCH:
+  Expected: "7. Sort Stocks Alphabetically"
+  Actual:   "8. SEDG - $13.00"
+
+[LINE 258] MISMATCH:
+  Expected: "8. Sort Stocks by ASCII Sum of Name"
+  Actual:   "=== Stock Management Menu ==="
+
+[LINE 259] MISMATCH:
+  Expected: "9. Check Palindromic Stock Names"
+  Actual:   "1. Add Stock"
+
+[LINE 260] MISMATCH:
+  Expected: "10. Exit"
+  Actual:   "2. Print Stocks"
+
+[LINE 261] MISMATCH:
+  Expected: "Please enter a number between 0-99: "
+  Actual:   "3. Double All Stocks Price"
+
+[LINE 262] MISMATCH:
+  Expected: "Enter stock name: "
+  Actual:   "4. Drop Stocks Price by x% "
+
+[LINE 263] MISMATCH:
+  Expected: "Enter stock price: "
+  Actual:   "5. Find Less Expensive Stock"
+
+[LINE 264] MISMATCH:
+  Expected: "Stock added."
+  Actual:   "6. Sort Stocks by Price"
+
+[LINE 265] MISMATCH:
+  Expected: ""
+  Actual:   "7. Sort Stocks Alphabetically"
+
+[LINE 266] MISMATCH:
+  Expected: "=== Stock Management Menu ==="
+  Actual:   "8. Sort Stocks by ASCII Sum of Name"
+
+[LINE 267] MISMATCH:
+  Expected: "1. Add Stock"
+  Actual:   "9. Check Palindromic Stock Names"
+
+[LINE 268] MISMATCH:
+  Expected: "2. Print Stocks"
+  Actual:   "10. Exit"
+
+[LINE 269] MISMATCH:
+  Expected: "3. Double All Stocks Price"
+  Actual:   "Please enter a number between 0-99: Sorted by ASCII sum."
+
+[LINE 270] MISMATCH:
+  Expected: "4. Drop Stocks Price by x%"
+  Actual:   "=== Stock Management Menu ==="
+
+[LINE 271] MISMATCH:
+  Expected: "5. Find Less Expensive Stock"
+  Actual:   "1. Add Stock"
+
+[LINE 272] MISMATCH:
+  Expected: "6. Sort Stocks by Price"
+  Actual:   "2. Print Stocks"
+
+[LINE 273] MISMATCH:
+  Expected: "7. Sort Stocks Alphabetically"
+  Actual:   "3. Double All Stocks Price"
+
+[LINE 274] MISMATCH:
+  Expected: "8. Sort Stocks by ASCII Sum of Name"
+  Actual:   "4. Drop Stocks Price by x% "
+
+[LINE 275] MISMATCH:
+  Expected: "9. Check Palindromic Stock Names"
+  Actual:   "5. Find Less Expensive Stock"
+
+[LINE 276] MISMATCH:
+  Expected: "10. Exit"
+  Actual:   "6. Sort Stocks by Price"
+
+[LINE 277] MISMATCH:
+  Expected: "Please enter a number between 0-99: "
+  Actual:   "7. Sort Stocks Alphabetically"
+
+[LINE 278] MISMATCH:
+  Expected: "Sorted by name."
+  Actual:   "8. Sort Stocks by ASCII Sum of Name"
+
+[LINE 279] MISMATCH:
+  Expected: ""
+  Actual:   "9. Check Palindromic Stock Names"
+
+[LINE 280] MISMATCH:
+  Expected: "=== Stock Management Menu ==="
+  Actual:   "10. Exit"
+
+[LINE 281] MISMATCH:
+  Expected: "1. Add Stock"
+  Actual:   "Please enter a number between 0-99: 1. IBM - $225.00"
+
+[LINE 282] MISMATCH:
+  Expected: "2. Print Stocks"
+  Actual:   "2. Amd - $83.00"
+
+[LINE 283] MISMATCH:
+  Expected: "3. Double All Stocks Price"
+  Actual:   "3. AAPL - $181.00"
+
+[LINE 284] MISMATCH:
+  Expected: "4. Drop Stocks Price by x%"
+  Actual:   "4. SEDG - $13.00"
+
+[LINE 285] MISMATCH:
+  Expected: "5. Find Less Expensive Stock"
+  Actual:   "5. NVDA - $97.00"
+
+[LINE 286] MISMATCH:
+  Expected: "6. Sort Stocks by Price"
+  Actual:   "6. GOOG - $149.00"
+
+[LINE 287] MISMATCH:
+  Expected: "7. Sort Stocks Alphabetically"
+  Actual:   "7. INTC - $9.50"
+
+[LINE 288] MISMATCH:
+  Expected: "8. Sort Stocks by ASCII Sum of Name"
+  Actual:   "8. ESLT - $364.00"
+
+[LINE 289] MISMATCH:
+  Expected: "9. Check Palindromic Stock Names"
+  Actual:   "=== Stock Management Menu ==="
+
+[LINE 290] MISMATCH:
+  Expected: "10. Exit"
+  Actual:   "1. Add Stock"
+
+[LINE 291] MISMATCH:
+  Expected: "Please enter a number between 0-99: "
+  Actual:   "2. Print Stocks"
+
+[LINE 292] MISMATCH:
+  Expected: "1. AAPL - $181.00"
+  Actual:   "3. Double All Stocks Price"
+
+[LINE 293] MISMATCH:
+  Expected: "2. Amd - $83.00"
+  Actual:   "4. Drop Stocks Price by x% "
+
+[LINE 294] MISMATCH:
+  Expected: "3. ESLT - $364.00"
+  Actual:   "5. Find Less Expensive Stock"
+
+[LINE 295] MISMATCH:
+  Expected: "4. GOOG - $149.00"
+  Actual:   "6. Sort Stocks by Price"
+
+[LINE 296] MISMATCH:
+  Expected: "5. IBM - $225.00"
+  Actual:   "7. Sort Stocks Alphabetically"
+
+[LINE 297] MISMATCH:
+  Expected: "6. INTC - $9.50"
+  Actual:   "8. Sort Stocks by ASCII Sum of Name"
+
+[LINE 298] MISMATCH:
+  Expected: "7. NVDA - $97.00"
+  Actual:   "9. Check Palindromic Stock Names"
+
+[LINE 299] MISMATCH:
+  Expected: "8. SEDG - $13.00"
+  Actual:   "10. Exit"
+
+[LINE 300] MISMATCH:
+  Expected: ""
+  Actual:   "Please enter a number between 0-99: Palindrome stock: GOOG"
+
+[LINE 301] MISMATCH:
+  Expected: "=== Stock Management Menu ==="
+  Actual:   "Invalid input."
+
+[LINE 302] MISMATCH:
+  Expected: "1. Add Stock"
+  Actual:   "You made 1 errors from 5, try again."
+
+[LINE 303] MISMATCH:
+  Expected: "2. Print Stocks"
+  Actual:   "Please enter a number between 0-99: Invalid input."
+
+[LINE 304] MISMATCH:
+  Expected: "3. Double All Stocks Price"
+  Actual:   "You made 2 errors from 5, try again."
+
+[LINE 305] MISMATCH:
+  Expected: "4. Drop Stocks Price by x%"
+  Actual:   "Please enter a number between 0-99: === Stock Management Menu ==="
+
+[LINE 306] MISMATCH:
+  Expected: "5. Find Less Expensive Stock"
+  Actual:   "1. Add Stock"
+
+[LINE 307] MISMATCH:
+  Expected: "6. Sort Stocks by Price"
+  Actual:   "2. Print Stocks"
+
+[LINE 308] MISMATCH:
+  Expected: "7. Sort Stocks Alphabetically"
+  Actual:   "3. Double All Stocks Price"
+
+[LINE 309] MISMATCH:
+  Expected: "8. Sort Stocks by ASCII Sum of Name"
+  Actual:   "4. Drop Stocks Price by x% "
+
+[LINE 310] MISMATCH:
+  Expected: "9. Check Palindromic Stock Names"
+  Actual:   "5. Find Less Expensive Stock"
+
+[LINE 311] MISMATCH:
+  Expected: "10. Exit"
+  Actual:   "6. Sort Stocks by Price"
+
+[LINE 312] MISMATCH:
+  Expected: "Please enter a number between 0-99: "
+  Actual:   "7. Sort Stocks Alphabetically"
+
+[LINE 313] MISMATCH:
+  Expected: "Sorted by ASCII sum."
+  Actual:   "8. Sort Stocks by ASCII Sum of Name"
+
+[LINE 314] MISMATCH:
+  Expected: ""
+  Actual:   "9. Check Palindromic Stock Names"
+
+[LINE 315] MISMATCH:
+  Expected: "=== Stock Management Menu ==="
+  Actual:   "10. Exit"
+
+[LINE 316] MISMATCH:
+  Expected: "1. Add Stock"
+  Actual:   "Please enter a number between 0-99: Exiting program..."
+
+[LINE 317] MISSING in actual: "2. Print Stocks"
+[LINE 318] MISSING in actual: "3. Double All Stocks Price"
+[LINE 319] MISSING in actual: "4. Drop Stocks Price by x%"
+[LINE 320] MISSING in actual: "5. Find Less Expensive Stock"
+[LINE 321] MISSING in actual: "6. Sort Stocks by Price"
+[LINE 322] MISSING in actual: "7. Sort Stocks Alphabetically"
+[LINE 323] MISSING in actual: "8. Sort Stocks by ASCII Sum of Name"
+[LINE 324] MISSING in actual: "9. Check Palindromic Stock Names"
+[LINE 325] MISSING in actual: "10. Exit"
+[LINE 326] MISSING in actual: "Please enter a number between 0-99: "
+[LINE 327] MISSING in actual: "1. IBM - $225.00"
+[LINE 328] MISSING in actual: "2. Amd - $83.00"
+[LINE 329] MISSING in actual: "3. AAPL - $181.00"
+[LINE 330] MISSING in actual: "4. SEDG - $13.00"
+[LINE 331] MISSING in actual: "5. NVDA - $97.00"
+[LINE 332] MISSING in actual: "6. GOOG - $149.00"
+[LINE 333] MISSING in actual: "7. INTC - $9.50"
+[LINE 334] MISSING in actual: "8. ESLT - $364.00"
+[LINE 335] MISSING in actual: ""
+[LINE 336] MISSING in actual: "=== Stock Management Menu ==="
+[LINE 337] MISSING in actual: "1. Add Stock"
+[LINE 338] MISSING in actual: "2. Print Stocks"
+[LINE 339] MISSING in actual: "3. Double All Stocks Price"
+[LINE 340] MISSING in actual: "4. Drop Stocks Price by x%"
+[LINE 341] MISSING in actual: "5. Find Less Expensive Stock"
+[LINE 342] MISSING in actual: "6. Sort Stocks by Price"
+[LINE 343] MISSING in actual: "7. Sort Stocks Alphabetically"
+[LINE 344] MISSING in actual: "8. Sort Stocks by ASCII Sum of Name"
+[LINE 345] MISSING in actual: "9. Check Palindromic Stock Names"
+[LINE 346] MISSING in actual: "10. Exit"
+[LINE 347] MISSING in actual: "Please enter a number between 0-99: "
+[LINE 348] MISSING in actual: "Palindrome stock: GOOG"
+[LINE 349] MISSING in actual: ""
+[LINE 350] MISSING in actual: "=== Stock Management Menu ==="
+[LINE 351] MISSING in actual: "1. Add Stock"
+[LINE 352] MISSING in actual: "2. Print Stocks"
+[LINE 353] MISSING in actual: "3. Double All Stocks Price"
+[LINE 354] MISSING in actual: "4. Drop Stocks Price by x%"
+[LINE 355] MISSING in actual: "5. Find Less Expensive Stock"
+[LINE 356] MISSING in actual: "6. Sort Stocks by Price"
+[LINE 357] MISSING in actual: "7. Sort Stocks Alphabetically"
+[LINE 358] MISSING in actual: "8. Sort Stocks by ASCII Sum of Name"
+[LINE 359] MISSING in actual: "9. Check Palindromic Stock Names"
+[LINE 360] MISSING in actual: "10. Exit"
+[LINE 361] MISSING in actual: "Please enter a number between 0-99: "
+[LINE 362] MISSING in actual: "Invalid input."
+[LINE 363] MISSING in actual: "You made 1 errors from 5, try again."
+[LINE 364] MISSING in actual: "Please enter a number between 0-99: "
+[LINE 365] MISSING in actual: "Invalid input."
+[LINE 366] MISSING in actual: "You made 2 errors from 5, try again."
+[LINE 367] MISSING in actual: "Please enter a number between 0-99: "
+[LINE 368] MISSING in actual: "Exiting program..."
+----------------------------------------
+Total mismatches: 368

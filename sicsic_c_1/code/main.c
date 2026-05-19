@@ -174,11 +174,11 @@ int conv_selection_to_int(char *input) {
 }
 
 void printMenu() {
-    printf ("=== Stock Management Menu ===\n"
+    printf("=== Stock Management Menu ===\n"
                     "1. Add Stock\n"
                     "2. Print Stocks\n"
                     "3. Double All Stocks Price\n"
-                    "4. Drop Stocks Price by x%\n"
+                    "4. Drop Stocks Price by x%% \n"
                     "5. Find Less Expensive Stock\n"
                     "6. Sort Stocks by Price\n"
                     "7. Sort Stocks Alphabetically\n"
