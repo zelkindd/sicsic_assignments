@@ -11,3 +11,11 @@ library.h
 *.exe
 *.out
 *.bin
+code/main
+code/tester
+code/run
+
+# Temp test output
+code/actual_output.txt
+code/mismatches.txt
+stimuli/*/actual.txt
