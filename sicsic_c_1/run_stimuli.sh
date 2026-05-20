@@ -40,7 +40,7 @@ for test_dir in "$STIMULI_DIR"/*/; do
 
     # Generate expected output from win.exe via wine (convert LF to CRLF for Windows binary)
     if [ $USE_REF -eq 1 ]; then
-        sed 's/$/\r/' "$input_file" | wine "$WIN_EXE" > "$expected_file" 2>/dev/null
+        sed 's/\r//' "$input_file" | wine "$WIN_EXE" > "$expected_file" 2>/dev/null
     elif [ ! -f "$expected_file" ]; then
         echo "[$test_name] SKIP - wine not found and no pre-generated expected.txt"
         continue
