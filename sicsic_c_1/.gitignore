@@ -19,3 +19,6 @@ code/run
 code/actual_output.txt
 code/mismatches.txt
 stimuli/*/actual.txt
+
+#claude
+.claude/
