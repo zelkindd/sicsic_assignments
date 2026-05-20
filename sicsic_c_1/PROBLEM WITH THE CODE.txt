@@ -1,0 +1,85 @@
+I've done the full analysis. I ran win.exe (the reference binary) against input.txt and compared its output to the student code in main.c. Here's a
+  complete list of bugs:
+
+  ---
+  Bugs That Break the Expected Output
+
+  1. Sort functions don't modify the original array (Critical)
+
+  sortByPrice, sortByName, and sortByAsciiSum all create a temp copy, sort and print it, then free it — leaving the original stocks[] unchanged. The
+  reference behavior is to sort stocks[] in-place and only print "Sorted by X." The temp array should be removed entirely. This means that after option 6,
+  when option 2 (print) is called, the output still shows the original insertion order instead of the sorted order.
+
+  2. Wrong error message format (main.c:62)
+
+  Current: "The input should be non negative upto 2 digits number, %d tries are left!\n", tries
+  Expected:
+  Invalid input.
+  You made X errors from 5, try again.
+  Please enter a number between 0-99:
+  Where X = 5 - tries. After an error the code also needs to reprint just the short prompt (not the full menu).
+
+  3. Missing "Exiting program..." on exit
+
+  When choice == 10, the reference prints "Exiting program...\n". The student code exits silently.
+
+  4. printMenu has no trailing newline (main.c:188)
+
+  The last line "Please enter a number between 0-99:" has no \n, so the next output line is glued onto the same line. The reference shows each on its own
+  line.
+
+  ---
+  Additional Bugs (Logic/Safety)
+
+  5. No MAX_STOCKS limit in addStock (main.c:140)
+
+  There is no check for *ptr_stock_count >= MAX_STOCKS before writing stocks[*ptr_stock_count]. Adding more than 10 stocks will write beyond the allocated
+  array and corrupt memory/crash.
+
+  6. Empty string passes isValidName (main.c:191)
+
+  If the user hits Enter without typing anything, strlen = 0, the for loop never runs, and the function returns 1 (valid). An empty stock name gets silently
+   accepted.
+
+  7. No NULL-check on fgets return value
+
+  In main, addStock, and dropStocks, if stdin hits EOF (e.g. the input file ends unexpectedly), fgets returns NULL. The next line buffer[strlen(buffer) - 1]
+   = '\0' then dereferences a potentially uninitialized buffer — undefined behavior / crash.
+
+  8. isValidPrice rejects decimal prices (main.c:207)
+
+  Only accepts digit characters — a price like "9.50" is rejected. After the 50% drop, INTC becomes $9.50 internally, but if someone were to re-enter that
+  price it would fail. The test happens to only use integer inputs, but this is a fragile limitation.
+
+  9. Dead code in isValidPercent (main.c:253)
+
+  if (result < 0 || ...) — since result is built digit-by-digit, it can never be negative. Also, if the user enters a huge number like "9999999999", integer
+   overflow occurs silently before the range check.
+
+  ---
+  Summary Table
+
+  ┌─────┬───────────────────────────┬──────────┬──────────────────────┐
+  │  #  │         Location          │ Severity │ Affects test output? │
+  ├─────┼───────────────────────────┼──────────┼──────────────────────┤
+  │ 1   │ sortByPrice/Name/AsciiSum │ Critical │ Yes                  │
+  ├─────┼───────────────────────────┼──────────┼──────────────────────┤
+  │ 2   │ main.c:62                 │ High     │ Yes                  │
+  ├─────┼───────────────────────────┼──────────┼──────────────────────┤
+  │ 3   │ main.c:107                │ High     │ Yes                  │
+  ├─────┼───────────────────────────┼──────────┼──────────────────────┤
+  │ 4   │ main.c:188                │ High     │ Yes                  │
+  ├─────┼───────────────────────────┼──────────┼──────────────────────┤
+  │ 5   │ addStock                  │ High     │ No (not tested)      │
+  ├─────┼───────────────────────────┼──────────┼──────────────────────┤
+  │ 6   │ isValidName               │ Medium   │ No                   │
+  ├─────┼───────────────────────────┼──────────┼──────────────────────┤
+  │ 7   │ fgets calls               │ Medium   │ No                   │
+  ├─────┼───────────────────────────┼──────────┼──────────────────────┤
+  │ 8   │ isValidPrice              │ Low      │ No                   │
+  ├─────┼───────────────────────────┼──────────┼──────────────────────┤
+  │ 9   │ isValidPercent            │ Low      │ No                   │
+  └─────┴───────────────────────────┴──────────┴──────────────────────┘
+
+  Would you like me to fix all of these?
+

@@ -1,0 +1,13 @@
+# CLion
+.idea/
+cmake-build-debug/
+CMakeLists.txt
+
+# CLion template files
+library.c
+library.h
+
+# Compiled binaries
+*.exe
+*.out
+*.bin
