@@ -1,0 +1,197 @@
+
+=== Stock Management Menu ===
+1. Add Stock
+2. Print Stocks
+3. Double All Stocks Price
+4. Drop Stocks Price by x%
+5. Find Less Expensive Stock
+6. Sort Stocks by Price
+7. Sort Stocks Alphabetically
+8. Sort Stocks by ASCII Sum of Name
+9. Check Palindromic Stock Names
+10. Exit
+Please enter a number between 0-99: 
+Enter stock name: 
+Enter stock price: 
+Stock added.
+
+=== Stock Management Menu ===
+1. Add Stock
+2. Print Stocks
+3. Double All Stocks Price
+4. Drop Stocks Price by x%
+5. Find Less Expensive Stock
+6. Sort Stocks by Price
+7. Sort Stocks Alphabetically
+8. Sort Stocks by ASCII Sum of Name
+9. Check Palindromic Stock Names
+10. Exit
+Please enter a number between 0-99: 
+Enter stock name: 
+Enter stock price: 
+Stock added.
+
+=== Stock Management Menu ===
+1. Add Stock
+2. Print Stocks
+3. Double All Stocks Price
+4. Drop Stocks Price by x%
+5. Find Less Expensive Stock
+6. Sort Stocks by Price
+7. Sort Stocks Alphabetically
+8. Sort Stocks by ASCII Sum of Name
+9. Check Palindromic Stock Names
+10. Exit
+Please enter a number between 0-99: 
+Enter stock name: 
+Enter stock price: 
+Stock added.
+
+=== Stock Management Menu ===
+1. Add Stock
+2. Print Stocks
+3. Double All Stocks Price
+4. Drop Stocks Price by x%
+5. Find Less Expensive Stock
+6. Sort Stocks by Price
+7. Sort Stocks Alphabetically
+8. Sort Stocks by ASCII Sum of Name
+9. Check Palindromic Stock Names
+10. Exit
+Please enter a number between 0-99: 
+Enter stock name: 
+Enter stock price: 
+Stock added.
+
+=== Stock Management Menu ===
+1. Add Stock
+2. Print Stocks
+3. Double All Stocks Price
+4. Drop Stocks Price by x%
+5. Find Less Expensive Stock
+6. Sort Stocks by Price
+7. Sort Stocks Alphabetically
+8. Sort Stocks by ASCII Sum of Name
+9. Check Palindromic Stock Names
+10. Exit
+Please enter a number between 0-99: 
+Enter stock name: 
+Enter stock price: 
+Stock added.
+
+=== Stock Management Menu ===
+1. Add Stock
+2. Print Stocks
+3. Double All Stocks Price
+4. Drop Stocks Price by x%
+5. Find Less Expensive Stock
+6. Sort Stocks by Price
+7. Sort Stocks Alphabetically
+8. Sort Stocks by ASCII Sum of Name
+9. Check Palindromic Stock Names
+10. Exit
+Please enter a number between 0-99: 
+Enter stock name: 
+Enter stock price: 
+Stock added.
+
+=== Stock Management Menu ===
+1. Add Stock
+2. Print Stocks
+3. Double All Stocks Price
+4. Drop Stocks Price by x%
+5. Find Less Expensive Stock
+6. Sort Stocks by Price
+7. Sort Stocks Alphabetically
+8. Sort Stocks by ASCII Sum of Name
+9. Check Palindromic Stock Names
+10. Exit
+Please enter a number between 0-99: 
+Enter stock name: 
+Enter stock price: 
+Stock added.
+
+=== Stock Management Menu ===
+1. Add Stock
+2. Print Stocks
+3. Double All Stocks Price
+4. Drop Stocks Price by x%
+5. Find Less Expensive Stock
+6. Sort Stocks by Price
+7. Sort Stocks Alphabetically
+8. Sort Stocks by ASCII Sum of Name
+9. Check Palindromic Stock Names
+10. Exit
+Please enter a number between 0-99: 
+Enter stock name: 
+Enter stock price: 
+Stock added.
+
+=== Stock Management Menu ===
+1. Add Stock
+2. Print Stocks
+3. Double All Stocks Price
+4. Drop Stocks Price by x%
+5. Find Less Expensive Stock
+6. Sort Stocks by Price
+7. Sort Stocks Alphabetically
+8. Sort Stocks by ASCII Sum of Name
+9. Check Palindromic Stock Names
+10. Exit
+Please enter a number between 0-99: 
+Enter stock name: 
+Enter stock price: 
+Stock added.
+
+=== Stock Management Menu ===
+1. Add Stock
+2. Print Stocks
+3. Double All Stocks Price
+4. Drop Stocks Price by x%
+5. Find Less Expensive Stock
+6. Sort Stocks by Price
+7. Sort Stocks Alphabetically
+8. Sort Stocks by ASCII Sum of Name
+9. Check Palindromic Stock Names
+10. Exit
+Please enter a number between 0-99: 
+Enter stock name: 
+Enter stock price: 
+Stock added.
+
+=== Stock Management Menu ===
+1. Add Stock
+2. Print Stocks
+3. Double All Stocks Price
+4. Drop Stocks Price by x%
+5. Find Less Expensive Stock
+6. Sort Stocks by Price
+7. Sort Stocks Alphabetically
+8. Sort Stocks by ASCII Sum of Name
+9. Check Palindromic Stock Names
+10. Exit
+Please enter a number between 0-99: 
+1. AAPL - $100.00
+2. GOOG - $200.00
+3. IBM - $150.00
+4. MSFT - $300.00
+5. NVDA - $400.00
+6. AMZN - $500.00
+7. META - $600.00
+8. TSLA - $700.00
+9. NFLX - $800.00
+10. ORCL - $900.00
+
+=== Stock Management Menu ===
+1. Add Stock
+2. Print Stocks
+3. Double All Stocks Price
+4. Drop Stocks Price by x%
+5. Find Less Expensive Stock
+6. Sort Stocks by Price
+7. Sort Stocks Alphabetically
+8. Sort Stocks by ASCII Sum of Name
+9. Check Palindromic Stock Names
+10. Exit
+Please enter a number between 0-99: 
+Exiting program...

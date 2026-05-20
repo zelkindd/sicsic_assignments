@@ -56,10 +56,11 @@ int main() {
         int valid_input = step_0_validate(buffer);
         if (valid_input != 0) {
             tries--;
-            if (tries == 0) { // The number of attempts has run out
-                printf("You have exceeded the allowed number of attempts!\n");
+            printf("Invalid input.\nYou made %d errors from 5, try again.\n", (5 - tries));
+            if (tries == 0) {
+                printf("Too many invalid attempts. Exiting...\n");
             } else {
-                printf("Invalid input.\nYou made %d errors from 5, try again.\nPlease enter a number between 0-99: \n", (5-tries));
+                printf("Please enter a number between 0-99: \n");
             }
         } else {
             tries = 5; // reset tries after a proper input
@@ -116,7 +117,7 @@ int main() {
         }
     }
     free(stocks);
-    printf("Exiting program...\n");
+    if (tries > 0) printf("Exiting program...\n");
     return 0;
 
 }
@@ -366,10 +367,12 @@ int isPalindrome(const char* str) {
 }
 
 void findPalindromes(Stock **stocks, int stock_count) {
-    // iterates through all stocks and prints those with palindromic names
+    int found = 0;
     for (int i = 0; i < stock_count; i++) {
         if (isPalindrome(stocks[i]->name)) {
             printf("Palindrome stock: %s\n", stocks[i]->name);
+            found = 1;
         }
     }
+    if (!found) printf("No palindromic stock names found.\n");
 }

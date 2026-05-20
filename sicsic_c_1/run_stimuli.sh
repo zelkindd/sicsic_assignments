@@ -38,12 +38,14 @@ for test_dir in "$STIMULI_DIR"/*/; do
         continue
     fi
 
-    # Generate expected output from win.exe via wine (convert LF to CRLF for Windows binary)
-    if [ $USE_REF -eq 1 ]; then
-        sed 's/\r//' "$input_file" | wine "$WIN_EXE" > "$expected_file" 2>/dev/null
-    elif [ ! -f "$expected_file" ]; then
-        echo "[$test_name] SKIP - wine not found and no pre-generated expected.txt"
-        continue
+    # Use pre-generated expected.txt if available, otherwise fall back to wine
+    if [ ! -f "$expected_file" ]; then
+        if [ $USE_REF -eq 1 ]; then
+            sed 's/\r//' "$input_file" | wine "$WIN_EXE" 2>/dev/null | tr -d '\r' > "$expected_file"
+        else
+            echo "[$test_name] SKIP - no pre-generated expected.txt and wine not found"
+            continue
+        fi
     fi
 
     # Run main
@@ -51,8 +53,8 @@ for test_dir in "$STIMULI_DIR"/*/; do
 
     TOTAL=$((TOTAL + 1))
 
-    # Compare
-    if diff "$expected_file" "$actual_file" > "$diff_file" 2>&1; then
+    # Compare (strip \r from expected in case of Windows CRLF line endings)
+    if diff <(tr -d '\r' < "$expected_file") "$actual_file" > "$diff_file" 2>&1; then
         echo "[$test_name] PASS"
         PASSED=$((PASSED + 1))
         rm -f "$diff_file"
