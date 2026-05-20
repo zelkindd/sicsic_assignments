@@ -6,10 +6,10 @@ WIN_EXE="./assignment_details/win.exe"
 
 # Check if wine is available
 if command -v wine &> /dev/null; then
-    USE_WINE=1
+    USE_REF=1
     echo "Wine detected - generating expected output from win.exe"
 else
-    USE_WINE=0
+    USE_REF=0
     echo "Wine not found - using pre-generated expected.txt files (if available)"
 fi
 
@@ -39,10 +39,10 @@ for test_dir in "$STIMULI_DIR"/*/; do
     fi
 
     # Generate expected output from win.exe via wine
-    if [ $USE_WINE -eq 1 ]; then
+    if [ $USE_REF -eq 1 ]; then
         wine "$WIN_EXE" < "$input_file" > "$expected_file" 2>/dev/null
     elif [ ! -f "$expected_file" ]; then
-        echo "[$test_name] SKIP - no wine and no pre-generated expected.txt"
+        echo "[$test_name] SKIP - wine not found and no pre-generated expected.txt"
         continue
     fi
 
