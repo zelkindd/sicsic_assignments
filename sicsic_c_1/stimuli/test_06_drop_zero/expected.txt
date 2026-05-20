@@ -12,7 +12,8 @@
 10. Exit
 Please enter a number between 0-99: 
 Enter stock name: 
-Invalid stock name.
+Enter stock price: 
+Stock added.
 
 === Stock Management Menu ===
 1. Add Stock
@@ -26,18 +27,33 @@ Invalid stock name.
 9. Check Palindromic Stock Names
 10. Exit
 Please enter a number between 0-99: 
-Invalid input.
-You made 1 errors from 5, try again.
+Enter x%: 
+Stock prices has dropped by 0%.
+
+=== Stock Management Menu ===
+1. Add Stock
+2. Print Stocks
+3. Double All Stocks Price
+4. Drop Stocks Price by x%
+5. Find Less Expensive Stock
+6. Sort Stocks by Price
+7. Sort Stocks Alphabetically
+8. Sort Stocks by ASCII Sum of Name
+9. Check Palindromic Stock Names
+10. Exit
 Please enter a number between 0-99: 
-Invalid input.
-You made 2 errors from 5, try again.
+1. AAPL - $100.00
+
+=== Stock Management Menu ===
+1. Add Stock
+2. Print Stocks
+3. Double All Stocks Price
+4. Drop Stocks Price by x%
+5. Find Less Expensive Stock
+6. Sort Stocks by Price
+7. Sort Stocks Alphabetically
+8. Sort Stocks by ASCII Sum of Name
+9. Check Palindromic Stock Names
+10. Exit
 Please enter a number between 0-99: 
-Invalid input.
-You made 3 errors from 5, try again.
-Please enter a number between 0-99: 
-Invalid input.
-You made 4 errors from 5, try again.
-Please enter a number between 0-99: 
-Invalid input.
-You made 5 errors from 5, try again.
-Too many invalid attempts. Exiting...
+Exiting program...
