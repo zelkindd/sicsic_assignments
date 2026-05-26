@@ -213,7 +213,6 @@ void print_warehouses(wlst* head) {
         temp = temp->next;
     }
 }
-
 void assign_item_to_warehouse(itemlst* item_head, wlst* w_head, int item_id, int w_code) {
     item* target_item = find_item_by_id(item_head, item_id);
     warehouse* target_w = find_warehouse_by_code(w_head, w_code);
