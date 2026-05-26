@@ -51,6 +51,7 @@ void add_item(itemlst** head, char* name, int id);
 void add_warehouse(wlst** head, char* name, int code);
 void print_items(itemlst* head);
 void print_warehouses(wlst* head);
+void assign_item_to_warehouse(itemlst* item_head, wlst* w_head, int item_id, int w_code);
 void print_error_message(int errid);
 
 /******************************************* your's functions ********************************************************************************/
@@ -161,26 +162,103 @@ void add_warehouse(wlst** head, char* name, int code) {
 }
 //Prints the entire list of items in the system
 void print_items(itemlst* head) {
-    printf("items LIST:\n");
+    printf("item LIST:\n");
     itemlst* temp = head;
     while (temp != NULL) {
         if (temp->data != NULL) {
             printf("%d:%s\n", temp->data->id, temp->data->name);
+
+            // If this item is assigned to any warehouses - print them
+            if (temp->data->warehouses != NULL) {
+                printf("Item Warehouses: ");
+                wlst* sub_w = temp->data->warehouses;
+                while (sub_w != NULL) {
+                    if (sub_w->data != NULL) {
+                        printf("%d-%s", sub_w->data->code, sub_w->data->location);
+                    }
+                    // if there's another warehouse next
+                    if (sub_w->next != NULL) {
+                        printf(", ");
+                    }
+                    sub_w = sub_w->next;
+                }
+                printf("\n");
+            }
         }
         temp = temp->next;
     }
 }
+//Prints the entire list of warehouses in the system
 void print_warehouses(wlst* head) {
     printf("warehouse LIST:\n");
     wlst* temp = head;
     while (temp != NULL) {
         if (temp->data != NULL) {
             printf("Warehouse code %d, Warehouse name: %s\n", temp->data->code, temp->data->location);
+
+            // If this warehouse contains any items, print them
+            if (temp->data->items != NULL) {
+                printf("items: ");
+                itemlst* sub_i = temp->data->items;
+                while (sub_i != NULL) {
+                    if (sub_i->data != NULL) {
+                        // Exact required format: ID X Name Y |
+                        printf("ID %d Name %s | ", sub_i->data->id, sub_i->data->name);
+                    }
+                    sub_i = sub_i->next;
+                }
+                printf("\n");
+            }
         }
         temp = temp->next;
     }
 }
 
+void assign_item_to_warehouse(itemlst* item_head, wlst* w_head, int item_id, int w_code) {
+    item* target_item = find_item_by_id(item_head, item_id);
+    warehouse* target_w = find_warehouse_by_code(w_head, w_code);
+    if (target_w == NULL || target_item == NULL) {
+        return;
+    }
+    // ** Create a new connection node for the item's warehouse list
+    wlst* new_w_node = (wlst*)malloc(sizeof(wlst));
+    if (new_w_node == NULL) {
+        print_error_message(7);
+    }
+    new_w_node->data = target_w;
+    new_w_node->next = NULL;
+
+    // Insert new_w_node at the end of target_item->warehouses sub-list
+    if (target_item->warehouses == NULL) {
+        target_item->warehouses = new_w_node;
+    } else {
+        wlst* temp_w = target_item->warehouses;
+        while (temp_w->next != NULL) {
+            temp_w = temp_w->next;
+        }
+        temp_w->next = new_w_node;
+    }
+
+    // ** Create a new connection node for the warehouse's item list
+    itemlst* new_i_node = (itemlst*)malloc(sizeof(itemlst));
+    if (new_i_node == NULL) {
+        free(new_w_node);
+        print_error_message(8);
+    }
+    new_i_node->data = target_item;
+    new_i_node->next = NULL;
+
+    // Insert new_i_node at the end of target_warehouse->items sub-list
+    if (target_w->items == NULL) {
+        target_w->items = new_i_node;
+    } else {
+        itemlst* temp_i = target_w->items;
+        while (temp_i->next != NULL) {
+            temp_i = temp_i->next;
+        }
+        temp_i->next = new_i_node;
+    }
+}
 
 /*****************************************new objects and insert object functions******************************************************/
 
@@ -289,7 +367,7 @@ int main() {
             printf("warehouse code: ");
             scanf("%d", &num);
 
-            //your function
+            assign_item_to_warehouse(items, warehouses, id, num);
 
             break;
 
