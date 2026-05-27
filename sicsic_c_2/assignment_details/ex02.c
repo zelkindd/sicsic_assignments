@@ -46,7 +46,9 @@ typedef struct wlst {
 /******************************************* your's prototypes *******************************************************************************/
 
 item* find_item_by_id(itemlst* head, int id);
+itemlst* find_item_node(itemlst* head, int id);
 warehouse* find_warehouse_by_code(wlst* head, int code);
+wlst* find_warehouse_node(wlst* head, int code);
 void add_item(itemlst** head, char* name, int id);
 void add_warehouse(wlst** head, char* name, int code);
 void print_items(itemlst* head);
@@ -54,6 +56,8 @@ void print_warehouses(wlst* head);
 void assign_item_to_warehouse(itemlst* item_head, wlst* w_head, int item_id, int w_code);
 void unassign_item_to_warehouse(itemlst* item_head, wlst* w_head, int item_id, int w_code);
 void generate_and_assign(itemlst** item_head, wlst** w_head);
+void free_items(itemlst* head);
+void free_warehouses(wlst* head);
 void print_error_message(int errid);
 
 /******************************************* your's functions ********************************************************************************/
@@ -381,6 +385,40 @@ void unassign_item_to_warehouse(itemlst *item_head, wlst *w_head, int item_id, i
 
 /***************************************************free**********************************************************************************/
 
+void free_items(itemlst *head) {
+    while (head != NULL) {
+        itemlst *next_node = head->next;
+        // free the item's warehouse sub-list nodes (not the warehouse structs)
+        wlst *w = head->data->warehouses;
+        while (w != NULL) {
+            wlst *next_w = w->next;
+            free(w);
+            w = next_w;
+        }
+        free(head->data->name);
+        free(head->data);
+        free(head);
+        head = next_node;
+    }
+}
+
+void free_warehouses(wlst *head) {
+    while (head != NULL) {
+        wlst *next_node = head->next;
+        // free the warehouse's item sub-list nodes (not the item structs)
+        itemlst *i = head->data->items;
+        while (i != NULL) {
+            itemlst *next_i = i->next;
+            free(i);
+            i = next_i;
+        }
+        free(head->data->location);
+        free(head->data);
+        free(head);
+        head = next_node;
+    }
+}
+
 
 /*******************************************Generate And Assign Items And Warehouses******************************************************/
 
@@ -538,7 +576,8 @@ int main() {
             printf("\n");
     } while (c != 'q');
 
-    //your free functions
+    free_items(items);
+    free_warehouses(warehouses);
 	return 0;
     
 }
