@@ -53,6 +53,7 @@ void print_items(itemlst* head);
 void print_warehouses(wlst* head);
 void assign_item_to_warehouse(itemlst* item_head, wlst* w_head, int item_id, int w_code);
 void unassign_item_to_warehouse(itemlst* item_head, wlst* w_head, int item_id, int w_code);
+void generate_and_assign(itemlst** item_head, wlst** w_head);
 void print_error_message(int errid);
 
 /******************************************* your's functions ********************************************************************************/
@@ -383,6 +384,32 @@ void unassign_item_to_warehouse(itemlst *item_head, wlst *w_head, int item_id, i
 
 /*******************************************Generate And Assign Items And Warehouses******************************************************/
 
+void generate_and_assign(itemlst **item_head, wlst **w_head) {
+    char buf[100];
+    int i;
+    srand(1948);
+    for (i = 0; i < 10; i++) {
+        strcpy(buf, "Warehouse");
+        buf[9] = '0' + i;
+        buf[10] = '\0';
+        add_warehouse(w_head, buf, i);
+    }
+    for (i = 0; i < 100; i++) {
+        strcpy(buf, "Item");
+        if (i < 10) {
+            buf[4] = '0' + i;
+            buf[5] = '\0';
+        } else {
+            buf[4] = '0' + i / 10;
+            buf[5] = '0' + i % 10;
+            buf[6] = '\0';
+        }
+        add_item(item_head, buf, i);
+        int randomCode = rand() % 10;
+        assign_item_to_warehouse(*item_head, *w_head, i, randomCode);
+    }
+}
+
 
 /*DO NOT TOUCH THIS FUNCTION */
 void getstring(char* buf, int length) {
@@ -498,27 +525,7 @@ int main() {
 		case 'g':  // generating and assigning items and warehouses
 			printf("Generating and assigning items to warehouses\n");
 
-			srand(1948);
-			for (int i = 0; i < 10; i++) {
-				strcpy(buf, "Warehouse");
-				buf[9] = '0' + i;
-				buf[10] = '\0';
-				add_warehouse(&warehouses, buf, i);
-			}
-			for (int i = 0; i < 100; i++) {
-				strcpy(buf, "Item");
-				if (i < 10) {
-					buf[4] = '0' + i;
-					buf[5] = '\0';
-				} else {
-					buf[4] = '0' + i / 10;
-					buf[5] = '0' + i % 10;
-					buf[6] = '\0';
-				}
-				add_item(&items, buf, i);
-				int randomCode = rand() % 10;
-				assign_item_to_warehouse(items, warehouses, i, randomCode);
-			}
+			generate_and_assign(&items, &warehouses);
 
 			break;
 
