@@ -56,9 +56,21 @@ void print_error_message(int errid);
 
 /******************************************* your's functions ********************************************************************************/
 
+/* Errors:
+ * 1: new item malloc fail
+ * 2: name malloc fail
+ * 3: itemlist malloc fail
+ * 4: warehouse malloc fail
+ * 5: location malloc fail
+ * 6: wlist malloc fail
+ * 7: wlist malloc fail
+*/
+
+
+
 //Search for an item in the main list by ID
-item* find_item_by_id(itemlst* head, int id) {
-    itemlst* temp = head;
+item *find_item_by_id(itemlst *head, int id) {
+    itemlst *temp = head;
     while (temp != NULL) {
         if (temp->data->id == id) {
             return temp->data; //Item found, return a pointer to it
@@ -67,9 +79,26 @@ item* find_item_by_id(itemlst* head, int id) {
     }
     return NULL; //The item does not exist in the list
 }
+
+itemlst *find_item_node(itemlst *head, int id) {
+    //return the node
+    itemlst *temp = head;
+    while (temp != NULL) {
+        if (temp->data->id == id) {
+            return temp;
+        }
+        temp = temp->next;
+    }
+    return NULL; //The item does not exist in the list
+}
+
+
+
+
+
 //Search for a warehouse in the main list by code
-warehouse* find_warehouse_by_code(wlst* head, int code) {
-    wlst* temp = head;
+warehouse *find_warehouse_by_code(wlst *head, int code) {
+    wlst *temp = head;
     while (temp != NULL) {
         if (temp->data->code == code) {
             return temp->data; //Warehouse found, return a pointer to it
@@ -78,18 +107,32 @@ warehouse* find_warehouse_by_code(wlst* head, int code) {
     }
     return NULL; //The warehouse does not exist in the list
 }
+
+wlst *find_warehouse_node(wlst *head, int code) {
+    wlst *temp = head;
+    while (temp != NULL) {
+        if (temp->data->code == code) {
+            return temp;
+        }
+        temp = temp->next;
+    }
+    return NULL; //The warehouse does not exist in the list
+}
+
+
 //Adds a new item to the main linked list
-void add_item(itemlst** head, char* name, int id) {
+void add_item(itemlst **head, char *name, int id) {
     if (find_item_by_id(*head, id) != NULL) {
         return; //Item exists, nothing added to the list
+        // SHOULD IT RETURN THE ITEM? (cross with the reference)
     }
     //Allocate memory for the item structure
-    item* new_item = (item*)malloc(sizeof(item));
+    item *new_item = (item *) malloc(sizeof(item));
     if (new_item == NULL) {
         print_error_message(1);
     }
     //Allocate memory for the item's name string
-    new_item->name = (char*)malloc(strlen(name) + 1);
+    new_item->name = (char *) malloc(strlen(name) + 1);
     if (new_item->name == NULL) {
         free(new_item);
         print_error_message(2);
@@ -99,7 +142,7 @@ void add_item(itemlst** head, char* name, int id) {
     new_item->id = id;
     new_item->warehouses = NULL;
     //Allocate memory for the main list node
-    itemlst* new_node = (itemlst*)malloc(sizeof(itemlst));
+    itemlst *new_node = (itemlst *) malloc(sizeof(itemlst));
     if (new_node == NULL) {
         free(new_item->name);
         free(new_item);
@@ -109,28 +152,30 @@ void add_item(itemlst** head, char* name, int id) {
     new_node->next = NULL;
     //Insert the new node at the end of the main items list
     if (*head == NULL) {
+        // head is the only node
         *head = new_node;
-    }
-    else {
-        itemlst* temp = *head;
+    } else {
+        // find the last node in the list
+        itemlst *temp = *head;
         while (temp->next != NULL) {
             temp = temp->next;
         }
         temp->next = new_node;
     }
 }
+
 //Adds a new warehouse to the main linked list
-void add_warehouse(wlst** head, char* name, int code) {
+void add_warehouse(wlst **head, char *name, int code) {
     if (find_warehouse_by_code(*head, code) != NULL) {
         return; //Warehouse exists, nothing added to the list
     }
     //Allocate memory for the warehouse structure
-    warehouse* new_warehouse = (warehouse*)malloc(sizeof(warehouse));
+    warehouse *new_warehouse = (warehouse *) malloc(sizeof(warehouse));
     if (new_warehouse == NULL) {
         print_error_message(4);
     }
     //Allocate memory for the warehouse location string
-    new_warehouse->location = (char*)malloc(strlen(name) + 1);
+    new_warehouse->location = (char *) malloc(strlen(name) + 1);
     if (new_warehouse->location == NULL) {
         free(new_warehouse);
         print_error_message(5);
@@ -140,7 +185,7 @@ void add_warehouse(wlst** head, char* name, int code) {
     new_warehouse->code = code;
     new_warehouse->items = NULL;
     //Allocate memory for the main list node
-    wlst* new_node = (wlst*)malloc(sizeof(wlst));
+    wlst *new_node = (wlst *) malloc(sizeof(wlst));
     if (new_node == NULL) {
         free(new_warehouse->location);
         free(new_warehouse);
@@ -151,19 +196,19 @@ void add_warehouse(wlst** head, char* name, int code) {
     //Insert the new node at the end of the main warehouses list
     if (*head == NULL) {
         *head = new_node;
-    }
-    else {
-        wlst* temp = *head;
+    } else {
+        wlst *temp = *head;
         while (temp->next != NULL) {
             temp = temp->next;
         }
         temp->next = new_node;
     }
 }
+
 //Prints the entire list of items in the system
-void print_items(itemlst* head) {
+void print_items(itemlst *head) {
     printf("item LIST:\n");
-    itemlst* temp = head;
+    itemlst *temp = head;
     while (temp != NULL) {
         if (temp->data != NULL) {
             printf("%d:%s\n", temp->data->id, temp->data->name);
@@ -171,7 +216,7 @@ void print_items(itemlst* head) {
             // If this item is assigned to any warehouses - print them
             if (temp->data->warehouses != NULL) {
                 printf("Item Warehouses: ");
-                wlst* sub_w = temp->data->warehouses;
+                wlst *sub_w = temp->data->warehouses;
                 while (sub_w != NULL) {
                     if (sub_w->data != NULL) {
                         printf("%d-%s", sub_w->data->code, sub_w->data->location);
@@ -188,10 +233,11 @@ void print_items(itemlst* head) {
         temp = temp->next;
     }
 }
+
 //Prints the entire list of warehouses in the system
-void print_warehouses(wlst* head) {
+void print_warehouses(wlst *head) {
     printf("warehouse LIST:\n");
-    wlst* temp = head;
+    wlst *temp = head;
     while (temp != NULL) {
         if (temp->data != NULL) {
             printf("Warehouse code %d, Warehouse name: %s\n", temp->data->code, temp->data->location);
@@ -199,7 +245,7 @@ void print_warehouses(wlst* head) {
             // If this warehouse contains any items, print them
             if (temp->data->items != NULL) {
                 printf("items: ");
-                itemlst* sub_i = temp->data->items;
+                itemlst *sub_i = temp->data->items;
                 while (sub_i != NULL) {
                     if (sub_i->data != NULL) {
                         // Exact required format: ID X Name Y |
@@ -213,14 +259,17 @@ void print_warehouses(wlst* head) {
         temp = temp->next;
     }
 }
-void assign_item_to_warehouse(itemlst* item_head, wlst* w_head, int item_id, int w_code) {
-    item* target_item = find_item_by_id(item_head, item_id);
-    warehouse* target_w = find_warehouse_by_code(w_head, w_code);
+
+void assign_item_to_warehouse(itemlst *item_head, wlst *w_head, int item_id, int w_code) {
+    // locate item and warehouse nodes
+    item *target_item = find_item_by_id(item_head, item_id);
+    warehouse *target_w = find_warehouse_by_code(w_head, w_code);
     if (target_w == NULL || target_item == NULL) {
         return;
     }
+
     // ** Create a new connection node for the item's warehouse list
-    wlst* new_w_node = (wlst*)malloc(sizeof(wlst));
+    wlst *new_w_node = (wlst *) malloc(sizeof(wlst));
     if (new_w_node == NULL) {
         print_error_message(7);
     }
@@ -231,7 +280,7 @@ void assign_item_to_warehouse(itemlst* item_head, wlst* w_head, int item_id, int
     if (target_item->warehouses == NULL) {
         target_item->warehouses = new_w_node;
     } else {
-        wlst* temp_w = target_item->warehouses;
+        wlst *temp_w = target_item->warehouses;
         while (temp_w->next != NULL) {
             temp_w = temp_w->next;
         }
@@ -239,7 +288,7 @@ void assign_item_to_warehouse(itemlst* item_head, wlst* w_head, int item_id, int
     }
 
     // ** Create a new connection node for the warehouse's item list
-    itemlst* new_i_node = (itemlst*)malloc(sizeof(itemlst));
+    itemlst *new_i_node = (itemlst *) malloc(sizeof(itemlst));
     if (new_i_node == NULL) {
         free(new_w_node);
         print_error_message(8);
@@ -251,12 +300,29 @@ void assign_item_to_warehouse(itemlst* item_head, wlst* w_head, int item_id, int
     if (target_w->items == NULL) {
         target_w->items = new_i_node;
     } else {
-        itemlst* temp_i = target_w->items;
+        itemlst *temp_i = target_w->items;
         while (temp_i->next != NULL) {
             temp_i = temp_i->next;
         }
         temp_i->next = new_i_node;
     }
+}
+
+void unassign_item_to_warehouse(itemlst *item_head, wlst *w_head, int item_id, int w_code) {
+    // remove the item from warehouse's linkedlist
+        // find the warehouse in wh main
+
+            // find the item in the wh's ll
+
+            // connect prev to next itemlist
+
+    // remove the warehouse from the item's linkedlist
+        // find the item in the item list
+
+            // find the warehouse in the item's ll
+
+            // connect prev to next wh's ll
+
 }
 
 /*****************************************new objects and insert object functions******************************************************/
