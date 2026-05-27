@@ -52,6 +52,7 @@ void add_warehouse(wlst** head, char* name, int code);
 void print_items(itemlst* head);
 void print_warehouses(wlst* head);
 void assign_item_to_warehouse(itemlst* item_head, wlst* w_head, int item_id, int w_code);
+void unassign_item_to_warehouse(itemlst* item_head, wlst* w_head, int item_id, int w_code);
 void print_error_message(int errid);
 
 /******************************************* your's functions ********************************************************************************/
@@ -309,19 +310,56 @@ void assign_item_to_warehouse(itemlst *item_head, wlst *w_head, int item_id, int
 }
 
 void unassign_item_to_warehouse(itemlst *item_head, wlst *w_head, int item_id, int w_code) {
-    // remove the item from warehouse's linkedlist
-        // find the warehouse in wh main
+// remove the item from warehouse's linkedlist
+    // find the warehouse in wh main
+    wlst *target_w = find_warehouse_node(w_head, w_code);
+    if (target_w == NULL) {return;}
 
-            // find the item in the wh's ll
+    itemlst *curr_item = target_w->data->items;
+    itemlst *prev_item = NULL;
 
-            // connect prev to next itemlist
+    if (curr_item != NULL && curr_item->data->id == item_id) {
+        // first node is the one to remove
+        itemlst *to_free = curr_item;
+        target_w->data->items = curr_item->next;
+        free(to_free);
+        curr_item = NULL; // skip the while loop below
+    }
+
+    while (curr_item != NULL) {
+        if (curr_item->data->id == item_id) {
+            prev_item->next = curr_item->next;
+            free(curr_item);
+            break;
+        }
+        prev_item = curr_item;
+        curr_item = curr_item->next;
+    }
+    
 
     // remove the warehouse from the item's linkedlist
-        // find the item in the item list
+    item *target_item = find_item_by_id(item_head, item_id);
+    if (target_item == NULL) { return; }
 
-            // find the warehouse in the item's ll
+    wlst *curr_w = target_item->warehouses;
+    wlst *prev_w = NULL;
 
-            // connect prev to next wh's ll
+    if (curr_w != NULL && curr_w->data->code == w_code) {
+        wlst *to_free = curr_w;
+        target_item->warehouses = curr_w->next;
+        free(to_free);
+        curr_w = NULL;
+    }
+
+    while (curr_w != NULL) {
+        if (curr_w->data->code == w_code) {
+            prev_w->next = curr_w->next;
+            free(curr_w);
+            break;
+        }
+        prev_w = curr_w;
+        curr_w = curr_w->next;
+    }
 
 }
 
@@ -445,7 +483,7 @@ int main() {
             printf("warehouse code: ");
             scanf("%d", &num);
 
-           //your function
+           unassign_item_to_warehouse(items, warehouses, id, num);
 
             break;
 
