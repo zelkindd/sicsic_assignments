@@ -7,7 +7,7 @@
 
 class Menu {
 public:
-   void mainMenu() {} // פונקציה ריקה זמנית רק כדי שהקומפילציה תעבור
+   void mainMenu() {}
 };
 
 #endif // MENU_H

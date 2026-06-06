@@ -2,6 +2,7 @@
    Author: Israel Israeli, ID: 01234567
 */ 
 #include "Stack.h"
+#include <iostream>
 #include <climits>
 
 // --- 1. Constructors & Destructor ---
