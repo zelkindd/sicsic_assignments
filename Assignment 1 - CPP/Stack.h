@@ -1,6 +1,8 @@
 /* Assignment C++: 1
-Author: Israel Israeli, ID: 01234567
+   Authors: Razel Elmoznino ID: 206004095
+            Dan Zelkind     ID: 211571948
 */
+
 #ifndef STACK_H
 #define STACK_H
 

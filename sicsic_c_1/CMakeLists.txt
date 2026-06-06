@@ -13,8 +13,8 @@ add_executable(assignment1
         "${ASSIGNMENT1_DIR}/StackNode.cpp"
         "${ASSIGNMENT1_DIR}/Stack.h"
         "${ASSIGNMENT1_DIR}/Stack.cpp"
-        #        "${ASSIGNMENT1_DIR}/MyQueue.h"
-        #        "${ASSIGNMENT1_DIR}/MyQueue.cpp"
-        #        "${ASSIGNMENT1_DIR}/Menu.h"
-        #        "${ASSIGNMENT1_DIR}/Menu.cpp"
+        "${ASSIGNMENT1_DIR}/MyQueue.h"
+        "${ASSIGNMENT1_DIR}/MyQueue.cpp"
+        "${ASSIGNMENT1_DIR}/Menu.h"
+        "${ASSIGNMENT1_DIR}/Menu.cpp"
 )

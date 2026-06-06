@@ -1,18 +1,20 @@
 /* Assignment C++: 1
-Author: Israel Israeli, ID: 01234567
+   Authors: Razel Elmoznino ID: 206004095
+            Dan Zelkind     ID: 211571948
 */
 
 #include "Menu.h"
 #include "Stack.h"
+#include "MyQueue.h"
 #include <iostream>
 
 using namespace std;
 
 int main() {
 
-    // ============================================================================
+    // =================================================================================================================
     // <<< TEMP STACK CHECK >>>
-    // ============================================================================
+    // =================================================================================================================
     std::cout << "--- Starting Stack Sanity Check ---" << std::endl;
 
     // 1. Create two empty stacks
@@ -62,11 +64,59 @@ int main() {
     std::cout << "Equality Check after change (Should be 0 - False): " << (testEqual1 == testEqual2) << std::endl;
 
     std::cout << "\n--- Sanity Check Completed Successfully ---" << std::endl;
-    return 0;
-    // ============================================================================
-    // <<< TEMP STACK CHECK END >>>
-    // ============================================================================
 
+    // =================================================================================================================
+    // <<< TEMP STACK CHECK END >>>
+    // =================================================================================================================
+
+    // =================================================================================================================
+    // <<< TEMP MYQUEUE CHECK >>>
+    // =================================================================================================================
+
+    std::cout << "--- Starting MyQueue Sanity Check ---" << std::endl;
+
+    // 1. Create a queue with a maximum capacity of 3 elements
+    MyQueue q(3);
+
+    // 2. Test isEmpty on a fresh queue (Should be 1 - True)
+    std::cout << "Is queue empty initially? (Should be 1): " << q.isEmpty() << std::endl;
+
+    // 3. Test peek on an empty queue (Should be -1 as required)
+    std::cout << "Peek on empty queue (Should be -1): " << q.peek() << std::endl;
+
+    // 4. Test enQueue (Inserting elements)
+    std::cout << "\nInserting elements 10, 20, 30..." << std::endl;
+    std::cout << "EnQueue 10: " << q.enQueue(10) << std::endl; // Should be 1 (True)
+    std::cout << "EnQueue 20: " << q.enQueue(20) << std::endl; // Should be 1 (True)
+    std::cout << "EnQueue 30: " << q.enQueue(30) << std::endl; // Should be 1 (True)
+
+    // 5. Test peek after insertions (Should show the first element: 10)
+    std::cout << "Peek after insertions (Should be 10): " << q.peek() << std::endl;
+
+    // 6. Test capacity limit (The queue maxQ is 3, so the 4th element should fail)
+    std::cout << "EnQueue 40 on a full queue (Should be 0 - False): " << q.enQueue(40) << std::endl;
+
+    // 7. Test deQueue (Removing elements in FIFO order)
+    std::cout << "\nRemoving elements (FIFO order)..." << std::endl;
+
+    std::cout << "Current Front (Peek): " << q.peek() << std::endl; // 10
+    std::cout << "DeQueue: " << q.deQueue() << std::endl;          // Removes 10
+
+    std::cout << "Current Front (Peek): " << q.peek() << std::endl; // 20
+    std::cout << "DeQueue: " << q.deQueue() << std::endl;          // Removes 20
+
+    std::cout << "Current Front (Peek): " << q.peek() << std::endl; // 30
+    std::cout << "DeQueue: " << q.deQueue() << std::endl;          // Removes 30
+
+    // 8. Test deQueue on an empty queue (Should fail)
+    std::cout << "\nDeQueue on an empty queue (Should be 0 - False): " << q.deQueue() << std::endl;
+    std::cout << "Is queue empty now? (Should be 1 - True): " << q.isEmpty() << std::endl;
+
+    std::cout << "\n--- MyQueue Sanity Check Completed Successfully ---" << std::endl;
+
+    // =================================================================================================================
+    // <<< TEMP MYQUEUE CHECK END >>>
+    // =================================================================================================================
 
 
     //simply creating a menu instance, then calling mainMenu(). the rest is inside mainMenu().
