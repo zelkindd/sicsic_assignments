@@ -19,6 +19,9 @@ public:
    // Constructor: Initializes the queue with a given maximum capacity
    MyQueue(int maxQ);
 
+   // Copy constructor: Deep copies elements and maxQ from other
+   MyQueue(const MyQueue& other);
+
    // Destructor: Defined explicitly as required.
    // Vector automatically cleans up its memory, so the body will be empty.
    ~MyQueue();
@@ -39,6 +42,9 @@ public:
 
    // Returns true if the queue contains no elements, false otherwise.
    bool isEmpty() const;
+
+   // Prints all elements as: first <- second <- ... <- last
+   void print() const;
 };
 
 #endif // MYQUEUE_H

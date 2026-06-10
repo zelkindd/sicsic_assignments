@@ -14,6 +14,21 @@
 Stack::Stack() : top(nullptr) {
 }
 
+// Copy constructor: Produces a deep copy so the two stacks own separate nodes.
+// We reverse into a temp stack first, then push from temp so the final order matches the source.
+Stack::Stack(const Stack& other) : top(nullptr) {
+   Stack temp;
+   StackNode* current = other.top;
+   while (current != nullptr) {
+      temp.push(current->getData());
+      current = current->getNext();
+   }
+   while (!temp.isEmpty()) {
+      push(temp.peek());
+      temp.pop();
+   }
+}
+
 // Destructor: Must clean up all dynamic nodes to prevent memory leaks.
 // We use a loop to delete nodes one by one until the stack is empty.
 Stack::~Stack() {

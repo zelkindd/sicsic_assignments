@@ -19,6 +19,9 @@ public:
    // Constructor: Initializes the stack to be empty (top = nullptr)
    Stack();
 
+   // Copy constructor: Deep copies every node from other into this stack
+   Stack(const Stack& other);
+
    // Destructor: Must free all dynamically allocated nodes to prevent memory leaks
    ~Stack();
 

@@ -4,12 +4,17 @@
 */
 
 #include "MyQueue.h"
+#include <iostream>
 
 // --- 1. Constructor & Destructor ---
 
 // Constructor: Initializes the maximum capacity of the queue.
 // The vector 'elements' is initialized automatically as empty.
 MyQueue::MyQueue(int maxQ) : maxQ(maxQ) {
+}
+
+// Copy constructor: std::vector's copy already does a deep copy of the elements.
+MyQueue::MyQueue(const MyQueue& other) : elements(other.elements), maxQ(other.maxQ) {
 }
 
 // Destructor: Empty because std::vector handles its own memory management.
@@ -59,4 +64,17 @@ int MyQueue::peek() const {
 // Returns true if the vector has 0 elements, false otherwise.
 bool MyQueue::isEmpty() const {
     return elements.empty(); // Returns true if size is 0
+}
+
+// Prints all elements in queue order as: first <- second <- ... <- last
+void MyQueue::print() const {
+    if (elements.empty()) {
+        std::cout << "The queue is empty" << std::endl;
+        return;
+    }
+    for (int i = 0; i < (int)elements.size(); i++) {
+        if (i > 0) std::cout << " <- ";
+        std::cout << elements[i];
+    }
+    std::cout << std::endl;
 }
