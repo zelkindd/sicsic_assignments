@@ -1,0 +1,345 @@
+
+Main Menu:
+1. Store Menu
+2. Shopping Cart Menu
+3. Exit
+Enter your choice: 
+Store Menu:
+1. Print store
+2. Add quantity to existing product or add new product
+3. Change existing product price
+4. Remove product from the store
+5. View total profit
+6. Exit
+Enter your choice: Supplier Details:
+Total Profit: 0
+Enter product ID: Product not found.
+Adding new product.
+Enter product name: Enter product price: Enter quantity: Product added.
+
+Store Menu:
+1. Print store
+2. Add quantity to existing product or add new product
+3. Change existing product price
+4. Remove product from the store
+5. View total profit
+6. Exit
+Enter your choice: Supplier Details:
+Product ID: 1, Name: Milk, Price: 3.5, Quantity: 10
+Total Profit: -35
+Enter product ID: Product not found.
+Adding new product.
+Enter product name: Enter product price: Enter quantity: Product added.
+
+Store Menu:
+1. Print store
+2. Add quantity to existing product or add new product
+3. Change existing product price
+4. Remove product from the store
+5. View total profit
+6. Exit
+Enter your choice: Supplier Details:
+Product ID: 1, Name: Milk, Price: 3.5, Quantity: 10
+Product ID: 2, Name: Bread, Price: 1.5, Quantity: 20
+Total Profit: -65
+Enter product ID: Product not found.
+
+Store Menu:
+1. Print store
+2. Add quantity to existing product or add new product
+3. Change existing product price
+4. Remove product from the store
+5. View total profit
+6. Exit
+Enter your choice: Supplier Details:
+Product ID: 1, Name: Milk, Price: 3.5, Quantity: 10
+Product ID: 2, Name: Bread, Price: 1.5, Quantity: 20
+Total Profit: -65
+Enter product ID: Product found: Product ID: 2, Name: Bread, Price: 1.5, Quantity: 20
+Enter new price: Price updated successfully.
+
+Store Menu:
+1. Print store
+2. Add quantity to existing product or add new product
+3. Change existing product price
+4. Remove product from the store
+5. View total profit
+6. Exit
+Enter your choice: Supplier Details:
+Product ID: 1, Name: Milk, Price: 3.5, Quantity: 10
+Product ID: 2, Name: Bread, Price: 2.99, Quantity: 20
+Total Profit: -65
+Enter product ID: Product not found.
+
+Store Menu:
+1. Print store
+2. Add quantity to existing product or add new product
+3. Change existing product price
+4. Remove product from the store
+5. View total profit
+6. Exit
+Enter your choice: Total profit: -65
+
+Store Menu:
+1. Print store
+2. Add quantity to existing product or add new product
+3. Change existing product price
+4. Remove product from the store
+5. View total profit
+6. Exit
+Enter your choice: Exiting supplier menu.
+
+Main Menu:
+1. Store Menu
+2. Shopping Cart Menu
+3. Exit
+Enter your choice: 
+Shopping Cart Menu:
+1. Print items in store
+2. Add product to cart from store
+3. Remove product
+4. View cart
+5. Check out
+6. Exit
+Enter your choice: Items in the store:
+Supplier Details:
+Product ID: 1, Name: Milk, Price: 3.5, Quantity: 10
+Product ID: 2, Name: Bread, Price: 2.99, Quantity: 20
+Total Profit: -65
+
+Shopping Cart Menu:
+1. Print items in store
+2. Add product to cart from store
+3. Remove product
+4. View cart
+5. Check out
+6. Exit
+Enter your choice: Invalid option. Please try again.
+
+Shopping Cart Menu:
+1. Print items in store
+2. Add product to cart from store
+3. Remove product
+4. View cart
+5. Check out
+6. Exit
+Enter your choice: Items in the store:
+Supplier Details:
+Product ID: 1, Name: Milk, Price: 3.5, Quantity: 10
+Product ID: 2, Name: Bread, Price: 2.99, Quantity: 20
+Total Profit: -65
+Enter product ID to add: Enter quantity: Not enough stock.
+Product added to cart.
+
+Shopping Cart Menu:
+1. Print items in store
+2. Add product to cart from store
+3. Remove product
+4. View cart
+5. Check out
+6. Exit
+Enter your choice: Items in the store:
+Supplier Details:
+Product ID: 1, Name: Milk, Price: 3.5, Quantity: 10
+Product ID: 2, Name: Bread, Price: 2.99, Quantity: 20
+Total Profit: -65
+Enter product ID to add: Product not found.
+
+Shopping Cart Menu:
+1. Print items in store
+2. Add product to cart from store
+3. Remove product
+4. View cart
+5. Check out
+6. Exit
+Enter your choice: Items in the store:
+Supplier Details:
+Product ID: 1, Name: Milk, Price: 3.5, Quantity: 10
+Product ID: 2, Name: Bread, Price: 2.99, Quantity: 20
+Total Profit: -65
+
+Shopping Cart Menu:
+1. Print items in store
+2. Add product to cart from store
+3. Remove product
+4. View cart
+5. Check out
+6. Exit
+Enter your choice: Items in the store:
+Supplier Details:
+Product ID: 1, Name: Milk, Price: 3.5, Quantity: 10
+Product ID: 2, Name: Bread, Price: 2.99, Quantity: 20
+Total Profit: -65
+Enter product ID to add: Enter quantity: Not enough stock.
+Product added to cart.
+
+Shopping Cart Menu:
+1. Print items in store
+2. Add product to cart from store
+3. Remove product
+4. View cart
+5. Check out
+6. Exit
+Enter your choice: Items in the store:
+Supplier Details:
+Product ID: 1, Name: Milk, Price: 3.5, Quantity: 10
+Product ID: 2, Name: Bread, Price: 2.99, Quantity: 20
+Total Profit: -65
+Enter product ID to add: Enter quantity: Product added to cart.
+
+Shopping Cart Menu:
+1. Print items in store
+2. Add product to cart from store
+3. Remove product
+4. View cart
+5. Check out
+6. Exit
+Enter your choice: Items in the cart:
+Shopping Cart Details:
+Product ID: 2, Name: Bread, Price: 2.99, Quantity: 20
+Product ID: 1, Name: Milk, Price: 3.5, Quantity: 10
+Total Price: 94.8
+
+Shopping Cart Menu:
+1. Print items in store
+2. Add product to cart from store
+3. Remove product
+4. View cart
+5. Check out
+6. Exit
+Enter your choice: Total price: 94.8
+Would you like to check out? (y/n): 
+Shopping Cart Menu:
+1. Print items in store
+2. Add product to cart from store
+3. Remove product
+4. View cart
+5. Check out
+6. Exit
+Enter your choice: Exiting shopping cart menu.
+
+Main Menu:
+1. Store Menu
+2. Shopping Cart Menu
+3. Exit
+Enter your choice: 
+Store Menu:
+1. Print store
+2. Add quantity to existing product or add new product
+3. Change existing product price
+4. Remove product from the store
+5. View total profit
+6. Exit
+Enter your choice: Supplier Details:
+Product ID: 1, Name: Milk, Price: 3.5, Quantity: 10
+Product ID: 2, Name: Bread, Price: 2.99, Quantity: 20
+Total Profit: -65
+Enter product ID: Product not found.
+Adding new product.
+Enter product name: Enter product price: Enter quantity: Product added.
+
+Store Menu:
+1. Print store
+2. Add quantity to existing product or add new product
+3. Change existing product price
+4. Remove product from the store
+5. View total profit
+6. Exit
+Enter your choice: Total profit: -140
+
+Store Menu:
+1. Print store
+2. Add quantity to existing product or add new product
+3. Change existing product price
+4. Remove product from the store
+5. View total profit
+6. Exit
+Enter your choice: Exiting supplier menu.
+
+Main Menu:
+1. Store Menu
+2. Shopping Cart Menu
+3. Exit
+Enter your choice: 
+Shopping Cart Menu:
+1. Print items in store
+2. Add product to cart from store
+3. Remove product
+4. View cart
+5. Check out
+6. Exit
+Enter your choice: Items in the store:
+Supplier Details:
+Product ID: 1, Name: Milk, Price: 3.5, Quantity: 10
+Product ID: 2, Name: Bread, Price: 2.99, Quantity: 20
+Product ID: 3, Name: Eggs, Price: 2.5, Quantity: 30
+Total Profit: -140
+Enter product ID to add: Enter quantity: Product added to cart.
+
+Shopping Cart Menu:
+1. Print items in store
+2. Add product to cart from store
+3. Remove product
+4. View cart
+5. Check out
+6. Exit
+Enter your choice: Total price: 167.3
+Would you like to check out? (y/n): Total price: 167.3
+Shopping Cart:
+Product ID: 2, Name: Bread, Price: 2.99, Quantity: 20
+Product ID: 1, Name: Milk, Price: 3.5, Quantity: 10
+Product ID: 3, Name: Eggs, Price: 2.5, Quantity: 29
+Total Price: 167.3
+
+Shopping Cart Menu:
+1. Print items in store
+2. Add product to cart from store
+3. Remove product
+4. View cart
+5. Check out
+6. Exit
+Enter your choice: Items in the cart:
+Shopping Cart Details:
+Total Price: 0
+
+Shopping Cart Menu:
+1. Print items in store
+2. Add product to cart from store
+3. Remove product
+4. View cart
+5. Check out
+6. Exit
+Enter your choice: Exiting shopping cart menu.
+
+Main Menu:
+1. Store Menu
+2. Shopping Cart Menu
+3. Exit
+Enter your choice: 
+Store Menu:
+1. Print store
+2. Add quantity to existing product or add new product
+3. Change existing product price
+4. Remove product from the store
+5. View total profit
+6. Exit
+Enter your choice: Supplier Details:
+Product ID: 1, Name: Milk, Price: 3.5, Quantity: 0
+Product ID: 2, Name: Bread, Price: 2.99, Quantity: 0
+Product ID: 3, Name: Eggs, Price: 2.5, Quantity: 1
+Total Profit: 27.3
+
+Store Menu:
+1. Print store
+2. Add quantity to existing product or add new product
+3. Change existing product price
+4. Remove product from the store
+5. View total profit
+6. Exit
+Enter your choice: Exiting supplier menu.
+
+Main Menu:
+1. Store Menu
+2. Shopping Cart Menu
+3. Exit
+Enter your choice: Goodbye!
