@@ -20,6 +20,7 @@ public:
 	Product(const Product &p); // Copy constructor with the same ID.
 	Product(const Product &p, int q); // Copy constructor with a limited quantity.
 	Product(string name, double price, int q = 1); // Constructor with a new ID.
+    
 
 	double get_price() const; // Returns the price of the product.
 	unsigned int get_quantity() const; // Returns the quantity of the product.
