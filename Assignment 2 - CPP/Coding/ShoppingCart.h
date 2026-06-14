@@ -17,7 +17,7 @@ protected:
 	double total_price; // Total price of products in the cart.
 
 public:
-	// Constructors and Destructor:
+	// Constructors & Destructor:
 	ShoppingCart(); // Default constructor initializing an empty cart.
 	virtual ~ShoppingCart(); // Destructor to clean up resources.
 

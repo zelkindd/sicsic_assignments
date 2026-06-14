@@ -16,11 +16,12 @@ private:
 	double price; // Price of the product.
 	unsigned int quantity; // Quantity available of the product.
 public:
-	// Constructors:
+	// Constructors & Destructor:
+	Product(); // Default constructor
 	Product(const Product &p); // Copy constructor with the same ID.
 	Product(const Product &p, int q); // Copy constructor with a limited quantity.
 	Product(string name, double price, int q = 1); // Constructor with a new ID.
-    
+	~Product(); // Destructor
 
 	double get_price() const; // Returns the price of the product.
 	unsigned int get_quantity() const; // Returns the quantity of the product.

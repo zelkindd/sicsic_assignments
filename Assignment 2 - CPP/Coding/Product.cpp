@@ -8,6 +8,14 @@ Assignment C++: 1 Authors: Razel Elmoznino ID: 206004095, Dan Zelkind ID: 211571
 
 using namespace std;
 
+int Product::next_id = 1;
+
+// Default constructor initializing with reasonable default values
+Product::Product() : id(0), name(""), price(0.0), quantity(0) {}
+
+// Destructor
+Product::~Product() {}
+
 // copy constructor with the same ID
 Product::Product(const Product &p) : id(p.id), name(p.name), price(p.price), quantity(p.quantity) {}
 
@@ -30,10 +38,10 @@ int Product::get_id() const {
 }
 
 ostream &operator<<(ostream &os, const Product &p) {
-    os << "Product ID: " << p.id
-       << ", Name: " << p.name
+    os << "Product: " << p.name
        << ", Price: " << p.price
-       << ", Quantity: " << p.quantity;
+       << ", Quantity: " << p.quantity
+       << ", ID: " << p.id;
     return os;
 }
 
