@@ -7,9 +7,7 @@ Assignment C++: 1 Authors: Razel Elmoznino ID: 206004095, Dan Zelkind ID: 211571
 
 ShoppingCart::ShoppingCart() : total_price(0.0) {}
 
-ShoppingCart::~ShoppingCart() {
-    // delete the items ??
-}
+ShoppingCart::~ShoppingCart() {}
 
 // Adds a product to the cart. If it exists, increments its quantity.
 bool ShoppingCart::add_Product(const Product &p) {
