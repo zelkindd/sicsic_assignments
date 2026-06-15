@@ -19,4 +19,7 @@ add_executable(assignment1
         "${ASSIGNMENT1_DIR}/Menu.cpp"
         "../Assignment 2 - CPP/Coding/Supplier.h"
         "../Assignment 2 - CPP/Coding/Supplier.cpp"
+        "../Assignment 2 - CPP/Coding/Product.cpp"
+        "../Assignment 2 - CPP/Coding/Customer.h"
+        "../Assignment 2 - CPP/Coding/Customer.cpp"
 )

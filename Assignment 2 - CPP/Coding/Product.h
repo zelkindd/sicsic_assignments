@@ -26,6 +26,7 @@ public:
 	double get_price() const; // Returns the price of the product.
 	unsigned int get_quantity() const; // Returns the quantity of the product.
 	int get_id() const; // Returns the product ID.
+	void set_price(double new_price); // Updates the product price.
 
 	// Operator Overloads:
 	friend ostream &operator<<(ostream &os, const Product &p); // Prints product details.

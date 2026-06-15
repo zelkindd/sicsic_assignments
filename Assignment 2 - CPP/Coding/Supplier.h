@@ -9,6 +9,7 @@ Authors: Razel Elmoznino ID: 206004095, Dan Zelkind ID: 211571948
 #include <string>
 #include <vector>
 #include "Product.h"
+#include "ShoppingCart.h"
 // Forward declaration of Customer since it's used in the methods
 class Customer;
 

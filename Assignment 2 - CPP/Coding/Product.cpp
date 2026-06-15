@@ -86,3 +86,10 @@ Product &Product::operator-=(unsigned int q) {
     }
     return *this;
 }
+
+void Product::set_price(double new_price) {
+    if (new_price >= 0) {
+        price = new_price;
+    }
+}
+
