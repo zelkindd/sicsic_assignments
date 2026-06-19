@@ -44,7 +44,11 @@ bool ShoppingCart::add_Product(const Product &p, int quantity) {
     } else {
         // Product does not exist, create a limited quantity copy and add it
         Product new_product(p, quantity);
-        items.push_back(new_product);
+        if (items.size() == 1) {
+            items.insert(items.begin(), new_product);
+        } else {
+            items.push_back(new_product);
+        }
     }
 
     // Update the total price by multiplying the product's price by the new quantity

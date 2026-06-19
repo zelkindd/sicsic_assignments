@@ -27,7 +27,6 @@ void Menu::mainMenu() {
         cout << "3. Exit" << endl;
         cout << "Enter your choice: ";
         cin >> choice;
-        cout << endl;
 
         switch (choice) {
             case 1:
@@ -140,7 +139,6 @@ void Menu::storeMenu() {
                 cout << "Invalid option. Please try again." << endl;
                 break;
         }
-        cout << endl;
     }
 }
 
@@ -252,6 +250,5 @@ void Menu::cartMenu() {
                 cout << "Invalid option. Please try again." << endl;
                 break;
         }
-        cout << endl;
     }
 }
