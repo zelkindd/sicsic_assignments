@@ -28,6 +28,7 @@ public:
 	bool remove_Product(const Product &p, int quantity); // Removes a specific quantity of a product. update the total price
 	const vector<Product> &Get_List() const; // Returns the list of products in the cart.
 	void printcart() const; // Prints the shopping cart and total price.
+	void print_receipt() const; // Prints cart as receipt with "Shopping Cart:" header.
 	virtual double Get_total() const; // Returns the total price.
 
 	// Operator Overloads:

@@ -115,19 +115,25 @@ double ShoppingCart::Get_total() const {
 
 // Friend operator to format and print the entire shopping cart contents
 ostream &operator<<(ostream &os, const ShoppingCart &cart) {
-    // Exact header from the output file
-    os << "--- Shopping Cart Contents ---" << endl;
+    os << "Shopping Cart Details:" << endl;
 
     // Loop through the cart items
     for (int i = 0; i < cart.items.size(); ++i) {
-        // Print each individual product using operator<<
         os << cart.items[i] << endl;
     }
 
-    // Print the final accumulated total price of the cart
     os << "Total Price: " << cart.total_price << endl;
 
-    return os; // Return the output stream to allow operator chaining
+    return os;
+}
+
+// Prints the cart as a receipt (used during checkout confirmation)
+void ShoppingCart::print_receipt() const {
+    cout << "Shopping Cart:" << endl;
+    for (int i = 0; i < items.size(); ++i) {
+        cout << items[i] << endl;
+    }
+    cout << "Total Price: " << total_price << endl;
 }
 
 // Accesses a pointer to a product in the cart by its ID.

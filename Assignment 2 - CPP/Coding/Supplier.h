@@ -35,6 +35,9 @@ public:
     bool customer_purchases(const ShoppingCart &cart); // Updates stock and profit for multiple products and adds its total_price to the counter.
     bool change_price(int id, double new_price); // Changes the price of a product by ID.
     double get_total_profit() const; // Returns the total profit accumulated from customer purchases.
+    void add_new_product(string name, double price, int quantity); // Adds a new product to inventory and debits cost.
+    bool add_quantity(int id, int quantity); // Adds quantity to existing product and debits cost.
+    const Product* find_product(int id) const; // Returns a const pointer to a product by ID, or nullptr.
 
     // Operator Overloads:
     friend ostream &operator<<(ostream &os, const Supplier &supplier); // Prints supplier details and total profit.

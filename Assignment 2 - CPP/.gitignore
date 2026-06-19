@@ -1,0 +1,10 @@
+
+#claude
+.claude/
+
+# Ignore everything inside Coding/
+Coding/*
+
+# But allow .h and .cpp files
+!Coding/*.h
+!Coding/*.cpp

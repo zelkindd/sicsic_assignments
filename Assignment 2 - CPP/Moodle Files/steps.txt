@@ -1,0 +1,24 @@
+1. review the assignment pdf
+2. review the class files that were created prior
+3. plan how you will create menu class while maintaing a similar style of coding to the previous classes
+4. implement the files for menu while maintaining the guidelines in the pdf
+	4.5. fix the functions you wanted (here below)
+5. integrate assgiment2.cpp 
+6. compile and create the exe file
+7. create a detailed test plan for testing the exe file 
+8. create the files to testbench our exe file compared to the example exe file (output2.4 is a proper running exe file that was supplied by the teaching crew)
+9. fix when a test is failed (every test needs to match exactly the example exe besides dumb bugs that make the example exe get stuck).
+
+thins to do in fixing the code:
+evised Task List
+
+  ┌─────┬─────────────────────────────────┬──────────────────────────────────────────────────┐
+  │  #  │              File               │                      Action                      │
+  ├─────┼─────────────────────────────────┼──────────────────────────────────────────────────┤
+  │ 1   │ Product.cpp                     │ Fix operator<< format                            │
+  ├─────┼─────────────────────────────────┼──────────────────────────────────────────────────┤
+  │ 2   │ ShoppingCart.cpp                │ Fix operator<<; add print_receipt() for checkout │
+  ├─────┼─────────────────────────────────┼──────────────────────────────────────────────────┤
+  │ 3   │ Supplier.h                      │ Add add_new_product(), find_product()            │
+  ├─────┼─────────────────────────────────┼──────────────────────────────────────────────────┤
+  │ 4   │ Supplier.cpp                    │ Fix operator<<; implement new methods            │

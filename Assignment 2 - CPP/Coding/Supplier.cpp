@@ -169,8 +169,42 @@ double Supplier::get_total_profit() const {
 
 // Friend operator to print supplier details and total profit.
 ostream &operator<<(ostream &os, const Supplier &supplier) {
-    os << "Supplier Name: " << supplier.name
-       << ", Total Profit: " << supplier.counter;
+    os << "Supplier Details:" << endl;
+    for (int i = 0; i < supplier.inventory.size(); ++i) {
+        os << supplier.inventory[i] << endl;
+    }
+    os << "Total Profit: " << supplier.counter << endl;
     return os;
+}
+
+// Adds a brand new product to the inventory and debits its cost from the counter.
+void Supplier::add_new_product(string name, double price, int quantity) {
+    Product p(name, price, quantity);
+    inventory.push_back(p);
+    counter -= price * quantity;
+}
+
+// Adds quantity to an existing product and debits its cost from the counter.
+// Returns true if the product was found, false otherwise.
+bool Supplier::add_quantity(int id, int quantity) {
+    for (int i = 0; i < inventory.size(); ++i) {
+        if (inventory[i] == id) {
+            double price = inventory[i].get_price();
+            inventory[i] += quantity;
+            counter -= price * quantity;
+            return true;
+        }
+    }
+    return false;
+}
+
+// Returns a const pointer to a product by ID, or nullptr if not found.
+const Product* Supplier::find_product(int id) const {
+    for (int i = 0; i < inventory.size(); ++i) {
+        if (inventory[i] == id) {
+            return &inventory[i];
+        }
+    }
+    return nullptr;
 }
 

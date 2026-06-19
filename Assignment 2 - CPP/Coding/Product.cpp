@@ -38,10 +38,10 @@ int Product::get_id() const {
 }
 
 ostream &operator<<(ostream &os, const Product &p) {
-    os << "Product: " << p.name
+    os << "Product ID: " << p.id
+       << ", Name: " << p.name
        << ", Price: " << p.price
-       << ", Quantity: " << p.quantity
-       << ", ID: " << p.id;
+       << ", Quantity: " << p.quantity;
     return os;
 }
 
