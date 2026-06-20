@@ -1,6 +1,7 @@
-/* Assignment C++: 1
-   Author: Israel Israeli, ID: 01234567
-*/ 
+/****************************************
+Assignment C++: 2
+Authors: Razel Elmoznino ID: 206004095, Dan Zelkind ID: 211571948
+*****************************************/
 
 #include "Menu.h"
 

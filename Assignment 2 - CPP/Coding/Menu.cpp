@@ -32,9 +32,28 @@ void Menu::mainMenu() {
             case 1:
                 storeMenu();
                 break;
-            case 2:
+            case 2: {
+                int type;
+                cout << "Enter customer type (1-Regular, 2-Business): ";
+                cin >> type;
+                string cust_name;
+                cout << "Enter customer name: ";
+                cin >> cust_name;
+                delete customer;
+                if (type == 2) {
+                    string company;
+                    double disc;
+                    cout << "Enter company name: ";
+                    cin >> company;
+                    cout << "Enter discount rate: ";
+                    cin >> disc;
+                    customer = new BusinessCustomer(cust_name, company, disc);
+                } else {
+                    customer = new Customer(cust_name);
+                }
                 cartMenu();
                 break;
+            }
             case 3:
                 cout << "Goodbye!" << endl;
                 return;
