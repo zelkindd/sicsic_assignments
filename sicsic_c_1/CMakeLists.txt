@@ -22,4 +22,11 @@ add_executable(assignment1
         "../Assignment 2 - CPP/Coding/Product.cpp"
         "../Assignment 2 - CPP/Coding/Customer.h"
         "../Assignment 2 - CPP/Coding/Customer.cpp"
+        "../Assignment 3 - CPP/Array.h"
+        "../Assignment 3 - CPP/Shape.h"
+        "../Assignment 3 - CPP/Shape.cpp"
+        "../Assignment 3 - CPP/Square.h"
+        "../Assignment 3 - CPP/Square.cpp"
+        "../Assignment 3 - CPP/Circle.h"
+        "../Assignment 3 - CPP/Circle.cpp"
 )
