@@ -51,7 +51,8 @@ void OrthogonalTriangle::draw() const {
 
     for (int i = 1; i <= sideInt; ++i) {
         for (int j = 0; j < i; ++j) {
-            std::cout << "* ";
+            if (j > 0) std::cout << " ";
+            std::cout << "*";
         }
         std::cout << std::endl;
     }

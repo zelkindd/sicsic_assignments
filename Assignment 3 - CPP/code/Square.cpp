@@ -45,7 +45,8 @@ void Square::draw() const {
 
     for (int i = 0; i < sizeInt; ++i) {
         for (int j = 0; j < sizeInt; ++j) {
-            std::cout << "* ";
+            if (j > 0) std::cout << " ";
+            std::cout << "*";
         }
         std::cout << std::endl;
     }

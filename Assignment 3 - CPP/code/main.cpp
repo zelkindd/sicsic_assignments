@@ -1,5 +1,5 @@
 /*Assignment C++: 3
-Author: Israel Israeli, ID: 01234567
+Authors: Razel Elmoznino ID: 206004095, Dan Zelkind ID: 211571948
 */
 
 #include <iostream>
@@ -25,11 +25,17 @@ int main() {
 
         switch (choice) {
             case 1: { // (1) Add a shape to the end of the array
-                int shapeType;
-                std::cout << "Choose 1 for Square, 2 for Circle, 3 for Triangle: ";
-                std::cin >> shapeType;
+                // Loop until a valid shape type is chosen
+                int shapeType = 0;
+                while (shapeType < 1 || shapeType > 3) {
+                    std::cout << "Choose 1 for Square, 2 for Circle, 3 for Triangle: ";
+                    std::cin >> shapeType;
+                    if (shapeType < 1 || shapeType > 3) {
+                        std::cout << "Invalid shape choice! Please enter 1, 2, or 3.\n";
+                    }
+                }
 
-                // Input validation loop - repeats until valid input is entered
+                // Input validation loop - repeats until valid data is entered
                 while (true) {
                     try {
                         std::string color;
@@ -55,7 +61,7 @@ int main() {
                             std::cin >> radius;
                             shapeArray.Add(new Circle(color.c_str(), width, radius));
                         }
-                        else if (shapeType == 3) { // Orthogonal Triangle
+                        else { // Orthogonal Triangle
                             double side;
                             std::cout << "Enter Triangle's color: ";
                             std::cin >> color;
@@ -64,10 +70,6 @@ int main() {
                             std::cout << "Enter Triangle's side: ";
                             std::cin >> side;
                             shapeArray.Add(new OrthogonalTriangle(color.c_str(), width, side));
-                        }
-                        else {
-                            std::cout << "Invalid shape choice!\n";
-                            break;
                         }
 
                         // Input successful, exit the validation loop
@@ -82,61 +84,65 @@ int main() {
             }
 
             case 2: { // (2) Delete a shape by index
-                int index;
-                std::cout << "Enter index to remove: ";
-                std::cin >> index;
-
-                try {
-                    Shape* removed = shapeArray.remove(index); // Remove from array
-                    delete removed; // Free memory of the object to prevent leakage
-                } catch (const std::out_of_range& e) {
-                    std::cout << "Error: " << e.what() << "\n";
+                while (true) {
+                    int index;
+                    std::cout << "Enter index to remove: ";
+                    std::cin >> index;
+                    try {
+                        Shape* removed = shapeArray.remove(index); // Remove from array
+                        delete removed; // Free memory of the object to prevent leakage
+                        break;
+                    } catch (const std::out_of_range& e) {
+                        std::cout << "Error: " << e.what() << " Please enter a valid index.\n";
+                    }
                 }
                 break;
             }
 
             case 3: { // (3) Print shape details by index
-                int index;
-                std::cout << "Enter index to print: ";
-                std::cin >> index;
+                while (true) {
+                    int index;
+                    std::cout << "Enter index to print: ";
+                    std::cin >> index;
+                    try {
+                        Shape* shape = shapeArray[index];
 
-                try {
-                    Shape* shape = shapeArray[index];
+                        // --- RTTI Section to check the exact type and print correct header ---
+                        Square* sq = dynamic_cast<Square*>(shape);
+                        Circle* circ = dynamic_cast<Circle*>(shape);
+                        OrthogonalTriangle* tri = dynamic_cast<OrthogonalTriangle*>(shape);
 
-                    // --- RTTI Section to check the exact type and print correct header ---
-                    Square* sq = dynamic_cast<Square*>(shape);
-                    Circle* circ = dynamic_cast<Circle*>(shape);
-                    OrthogonalTriangle* tri = dynamic_cast<OrthogonalTriangle*>(shape);
+                        if (sq != nullptr) {
+                            std::cout << "Square details:\n";
+                            std::cout << "color=" << shape->getColor()
+                                      << ", width=" << shape->getWidth()
+                                      << ", side=" << sq->getSide()
+                                      << ", area=" << shape->getArea()
+                                      << ", perimeter=" << shape->getPerimeter() << "\n";
+                            sq->draw(); // Call draw for Square as required
+                        }
+                        else if (circ != nullptr) {
+                            std::cout << "Circle details:\n";
+                            std::cout << "color=" << shape->getColor()
+                                      << ", width=" << shape->getWidth()
+                                      << ", radius=" << circ->getRadius()
+                                      << ", area=" << shape->getArea()
+                                      << ", perimeter=" << shape->getPerimeter() << "\n";
+                        }
+                        else if (tri != nullptr) {
+                            std::cout << "OrthogonalTriangle details:\n";
+                            std::cout << "color=" << shape->getColor()
+                                      << ", width=" << shape->getWidth()
+                                      << ", side=" << tri->getSide()
+                                      << " area= " << shape->getArea()
+                                      << ", perimeter=" << shape->getPerimeter() << "\n";
+                            tri->draw(); // Call draw for Triangle as required
+                        }
+                        break;
 
-                    if (sq != nullptr) {
-                        std::cout << "Square details:\n";
-                        std::cout << "color=" << shape->getColor()
-                                  << ", width=" << shape->getWidth()
-                                  << ", side=" << sq->getSide()
-                                  << ", area=" << shape->getArea()
-                                  << ", perimeter=" << shape->getPerimeter() << "\n";
-                        sq->draw(); // Call draw for Square as required
+                    } catch (const std::out_of_range& e) {
+                        std::cout << "Error: " << e.what() << " Please enter a valid index.\n";
                     }
-                    else if (circ != nullptr) {
-                        std::cout << "Circle details:\n";
-                        std::cout << "color=" << shape->getColor()
-                                  << ", width=" << shape->getWidth()
-                                  << ", radius=" << circ->getRadius()
-                                  << ", area=" << shape->getArea()
-                                  << ", perimeter=" << shape->getPerimeter() << "\n";
-                    }
-                    else if (tri != nullptr) {
-                        std::cout << "Orthogonal Triangle details:\n";
-                        std::cout << "color=" << shape->getColor()
-                                  << ", width=" << shape->getWidth()
-                                  << ", side=" << tri->getSide()
-                                  << ", area=" << shape->getArea()
-                                  << ", perimeter=" << shape->getPerimeter() << "\n";
-                        tri->draw(); // Call draw for Triangle as required
-                    }
-
-                } catch (const std::out_of_range& e) {
-                    std::cout << "Error: " << e.what() << "\n";
                 }
                 break;
             }
@@ -145,6 +151,7 @@ int main() {
                 break;
 
             default:
+                std::cout << "Invalid choice! Please enter 1, 2, 3, or 4.\n";
                 break;
         }
     }
